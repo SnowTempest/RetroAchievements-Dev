@@ -1,0 +1,35 @@
+[32-bit] Global Screen Pointer (Based on Screen ID)
+- - [Title Screen]
+- - - - - | + 0x15f = [8-bit] Current Title Screen State
+- - - - - | - - - 0x00 = Loading
+- - - - - | - - - 0x01 = Press Start
+- - - - - | - - - 0x04 = Start Pressed
+- - - - - | - - - 0x05 = Menu Entered
+- - - - - | + 0x163 = [8-bit] Previous Title Screen State
+- - - - - | - - - 0x00 = Loading
+- - - - - | - - - 0x01 = Press Start
+- - - - - | - - - 0x04 = Start Pressed
+- - - - - | + 0x167 = [8-bit] Chosen Title Option
+- - - - - | - - - 0x01 = Start Game
+- - - - - | - - - 0x02 = Options
+- - - - - | - - - 0x05 = Records
+- - - - - | - - - 0x0a = None / Intro Video
+- - - - - | + 0x168 = [8-bit] Current Title Screen Option
+- - - - - | - - - 0x00 = Start Game
+- - - - - | - - - 0x01 = Records
+- - - - - | - - - 0x02 = Options
+- - [Options]
+- - - - - | + 0x44 = [32-bit] Time Spent in Menu
+- - - - - | + 0x58 = [8-bit] Current Options Screen State
+- - - - - | - - - 0x00 = Loading
+- - - - - | - - - 0x01 = Screen Entered
+- - - - - | - - - 0x03 = Options Saved
+- - - - - | - - - 0x04 = Screen Exited
+- - - - - | + 0x64 = [8-bit] Current Options Screen Option
+- - - - - | - - - 0x00 = Sound
+- - - - - | - - - 0x01 = Volume
+- - - - - | - - - 0x02 = Rumble
+- - - - - | - - - 0x03 = Time Trials Ghost
+- - - - - | - - - 0x04 = VS. Item Box
+- - - - - | - - - 0x05 = VS. Laps
+- - - - - | - - - 0x05 = OK
