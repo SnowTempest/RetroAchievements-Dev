@@ -1,4 +1,6 @@
 [32-bit] Global Screen Pointer (Based on Screen ID)
+0x00000000 = Intro Video
+0x00000001 = Award Ceremony
 - - [Title Screen]
 - - - - - | + 0x15c = [32-bit BE] Current Title Screen State
 - - - - - | - - - 0x00 = Loading
@@ -202,7 +204,7 @@
 - - - - - | + 0x94 = [32-bit BE] Current Saved Time Trial Option
 - - - - - | + 0x98 = [32-bit BE] Current Saved VS. Item Box Option
 - - - - - | + 0x9C = [32-bit BE] Current Saved VS. Laps Option
-- - [Select Cup]
+- - [Cup Select]
 - - - - - | + 0x338 = [32-bit BE] Select Cup Screen State
 - - - - - | - - - 0x00 = Loading Select Cup
 - - - - - | - - - 0x01 = Select Cup
@@ -223,6 +225,75 @@
 - - - - - | - - - 0x00 = No
 - - - - - | - - - 0x02 = Yes
 - - - - - | + 0x388 = [32-bit BE] Cup Selected Animation Time
+- - [Stage Select]
+- - - - - | + 0x258 = [32-bit BE] Time Spent in Current Screen
+- - - - - | + 0x260 = [32-bit BE] Current Battle Stage Option
+- - - - - | - - - 0x00 = Cookie Land
+- - - - - | - - - 0x01 = Nintendo Gamecube
+- - - - - | - - - 0x02 = Block City
+- - - - - | - - - 0x03 = Pipe Plaza
+- - - - - | - - - 0x04 = Luigi's Mansion
+- - [Records]
+- - - - - | + 0x44 = [32-bit BE] Screen Animation Time
+- - - - - | + 0x84 = [32-bit BE] Current Records Screen
+- - - - - | - - - 0x01 = Records
+- - - - - | - - - 0x02 = Grand Prix
+- - - - - | - - - 0x03 = Time Trials
+- - - - - | + 0x88 = [32-bit BE] Previous Records Screen
+- - - - - | - - - 0x01 = Records
+- - - - - | - - - 0x02 = Grand Prix
+- - - - - | - - - 0x03 = Time Trials
+- - - - - | + 0x90 = [32-bit BE] Current Records Screen Option
+- - - - - | - - - 0x00 = Grand Prix
+- - - - - | - - - 0x01 = Time Trials
+- - - - - | - - - 0x02 = Go To Title Screen
+- - - - - | + 0x98 = [32-bit BE] Current Grand Prix Cup
+- - - - - | - - - 0x00 = Mushroom Cup
+- - - - - | - - - 0x01 = Flower Cup
+- - - - - | - - - 0x02 = Star Cup
+- - - - - | - - - 0x03 = Special Cup
+- - - - - | - - - 0x04 = All Cup Tour
+- - - - - | + 0x9c = [32-bit BE] Current Time Trials Track
+- - - - - | - - - 0x00 = Luigi Circuit
+- - - - - | - - - 0x01 = Peach Beach
+- - - - - | - - - 0x02 = Baby Park
+- - - - - | - - - 0x03 = Dry Dry Desert
+- - - - - | - - - 0x04 = Mushroom Bridge
+- - - - - | - - - 0x05 = Mario Circuit
+- - - - - | - - - 0x06 = Daisy Cruiser
+- - - - - | - - - 0x07 = Waluigi Stadium
+- - - - - | - - - 0x08 = Sherbet Land
+- - - - - | - - - 0x09 = Mushroom City
+- - - - - | - - - 0x0a = Yoshi Circuit
+- - - - - | - - - 0x0b = DK Mountain
+- - - - - | - - - 0x0c = Wario Colosseum
+- - - - - | - - - 0x0d = Dino Dino Jungle
+- - - - - | - - - 0x0e = Bowser's Castle
+- - - - - | - - - 0x0f = Rainbow Road
+- - - - - | + 0xa4 = [32-bit BE] Current Grand Prix Cup Times
+- - - - - | - - - 0x00 = Mushroom Cup
+- - - - - | - - - 0x01 = Flower Cup
+- - - - - | - - - 0x02 = Star Cup
+- - - - - | - - - 0x03 = Special Cup
+- - - - - | - - - 0x04 = All Cup Tour
+- - - - - | + 0xa8 = [32-bit BE] Current Time Trials Times
+- - - - - | - - - 0x00 = Luigi Circuit
+- - - - - | - - - 0x01 = Peach Beach
+- - - - - | - - - 0x02 = Baby Park
+- - - - - | - - - 0x03 = Dry Dry Desert
+- - - - - | - - - 0x04 = Mushroom Bridge
+- - - - - | - - - 0x05 = Mario Circuit
+- - - - - | - - - 0x06 = Daisy Cruiser
+- - - - - | - - - 0x07 = Waluigi Stadium
+- - - - - | - - - 0x08 = Sherbet Land
+- - - - - | - - - 0x09 = Mushroom City
+- - - - - | - - - 0x0a = Yoshi Circuit
+- - - - - | - - - 0x0b = DK Mountain
+- - - - - | - - - 0x0c = Wario Colosseum
+- - - - - | - - - 0x0d = Dino Dino Jungle
+- - - - - | - - - 0x0e = Bowser's Castle
+- - - - - | - - - 0x0f = Rainbow Road
+
 [32-bit BE] Global Pointer
 - - +0x0C = Global Screen Pointer
 - - [Non-InGame]
@@ -259,3 +330,31 @@
 0x13 = Piranha Pipes
 0x14 = Parade Kart
 0x15 = cKartIDMax
+
+
+[32-bit BE] Course Transition Pointer
+[In-Game] Race Timer / Controls Copy Pointer
++0x00 = [32-bit BE] Time Since Countdown
++0x04 = [32-bit BE] Countdown Started
+--------------0x00 = No
+--------------0x01 = Yes
+--------------0x02 = Replay Countdown
++0x198 = [8-bit] Race Character 1
++0x199 = [8-bit] Race Character 2
++0x19a = [8-bit] Race Kart
++0x19b = [8-bit] Race Track ID
++0x19c = [32-bit BE] Race Name
++0x1a0 = [32-bit BE] Race Total Time
+
+To do:
+
+Find Real None Start up time. 
+
+gamemode 2 - > 8
+bits flip same fram as ^
+screen id = 6
+
+check cup, check points, check track, 
+
+perfect - > check cup, check points, check awards, 
+2 - > 8 and current track is 4 (not all cup tour), 
