@@ -346,6 +346,79 @@
 +0x19c = [32-bit BE] Race Name
 +0x1a0 = [32-bit BE] Race Total Time
 
+
+[32-bit BE] Race Data Pointer
++0x8c = [32-bit BE] Time Trial Currenly Driving On 
+--------0x00 = Inner Out of Bounds Snow / Mud
+--------0x01 = Track
+--------0x02 = Air
+--------0x03 = Inner Out of Bounds Grass
+--------0x04 = Ice
+--------0x05 = Edge of Boost Ramp
+--------0x07 = Boost Pad
+--------0x08 = Mushroom Bridge Boost Pads / Rainbow Road Boost Pads
+--------0x09 = Launcher
+--------0x0a = Another Airborne
+--------0x0c = Inner Out of Bounds Desert
+--------0x0d = Pipe
+--------0x0f = Water / Lava
+--------0x13 = Outer Out of Bounds Desert / Grass / Dino Dino Jungle Bridge Shortcut
+--------0x47 = Wario Stadium Giant Boost Pad
+--------0xff = Daisy Cruiser Launcher / Mushroom Bridge Pipe / Peach Beach Pipe
++0x124 = [32-bit BE] Grand Prix Currenly Driving On 
++0x1ab8 = [32-bit BE] Time Trial Current Item Pointer
+++0x7c = Current Item ID
++0x1b7c = [32-bit BE] Grand Prix Current Item Pointer
+++0x7c = Current Item ID
+--------0x00 = Green Shell
+--------0x01 = King Bowser Shell
+--------0x02 = Red Shell
+--------0x03 = Banana
+--------0x04 = BK Banana
+--------0x05 = Mushroom
+--------0x06 = Star
+--------0x07 = Chain Chomp
+--------0x08 = Bomb-omb
+--------0x09 = Red Fireball
+--------0x0a = Lightning
+--------0x0b = Yoshi Egg
+--------0x0c = Golden Mushroom
+--------0x0d = Spiny Shell
+--------0x0e = Love Heart
+--------0x0f = Fake Item Box
+--------0x10 = None
+--------0x11 = Triple Green Shell
+--------0x12 = Triple Mushroom
+--------0x13 = Triple Red Shell
+--------0x14 = Triple Green Shell (Unused)
+--------0x15 = Green Fireball / Red Fireball
+--------0x16 = Nothing
+--------0x17 = Double Green Shell (Triple)
+--------0x18 = Double Mushroom (Triple)
+--------0x19 = Double Red Shell (Triple)
+--------0x1a = Green Fireball (Unused)
+--------0x1b = Birdo Egg
+--------0x1c = Single Green Shell (Triple)
+--------0x1d = Single Mushroom (Triple)
+--------0x1e = Single Red Shell (Triple)
+
+
+[32-bit BE] Drifting Data Pointer
++0x394 = [32-bit BE] Player 1 Current Drift
+--------0x00 = None
+--------0x01 = Orange Flames
+--------0x02 = Red Flames
+--------0x03 = Blue Flames
++0x398 = [32-bit BE] Player 2 Current Drift
++0x39C = [32-bit BE] Player 3 Current Drift
++0x3A0 = [32-bit BE] Player 4 Current Drift
++0x3A4 = [32-bit BE] Player 5 Current Drift
++0x3A8 = [32-bit BE] Player 6 Current Drift
++0x3AC = [32-bit BE] Player 7 Current Drift
++0x3B0 = [32-bit BE] Player 8 Current Drift
+
+
+
 To do:
 
 Find Real None Start up time. 

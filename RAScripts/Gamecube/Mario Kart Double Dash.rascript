@@ -116,13 +116,6 @@ function player_7_stun_animation_time() => dword_be(0x37FFD8)
 // $37FFDC: [32-bit BE] Player 8 Stun Animation Time
 function player_8_stun_animation_time() => dword_be(0x37FFDC)
 
-// $3A4B78: [32-bit BE] Prize Code Pointer (Time Trial Results]
-//          +0x1c270 = [8-bit] Prize Code Enabled
-//          ------------------- 0x00 = No
-//          ------------------- 0x01 = Yes
-//          +0x1c274 = [32-bit BE] Prize Code Combination
-function prize_code_pointer_time_trial_results() => dword_be(0x3A4B78)
-
 // $3B0754: [32-bit BE] Time Since Game Launch
 function time_since_game_launch() => dword_be(0x3B0754)
 
@@ -616,82 +609,6 @@ function previous_seventh_place_team_id() => dword_be(0x3B1244)
 
 // $3B1248: [32-bit BE] Previous Eighth Place Team ID
 function previous_eighth_place_team_id() => dword_be(0x3B1248)
-
-// $3B124C: [32-bit BE] Grand Prix First Character
-//          0x00 = Char ID None
-//          0x01 = Baby Mario
-//          0x02 = Baby Luigi
-//          0x03 = Paratroopa
-//          0x04 = Koopatroopa
-//          0x05 = Peach
-//          0x06 = Daisy
-//          0x07 = Mario
-//          0x08 = Luigi
-//          0x09 = Wario
-//          0x0a = Waluigi
-//          0x0b = Yoshi
-//          0x0c = Birdo
-//          0x0d = Donkey Kong
-//          0x0e = Diddy Kong
-//          0x0f = Bowser
-//          0x10 = Bowser Jr
-//          0x11 = Toad
-//          0x12 = Toadette
-//          0x13 = King Boo
-//          0x14 = Petey
-function grand_prix_first_character() => dword_be(0x3B124C)
-
-// $3B1250: [32-bit BE] Grand Prix Second Character
-//          0x00 = Char ID None
-//          0x01 = Baby Mario
-//          0x02 = Baby Luigi
-//          0x03 = Paratroopa
-//          0x04 = Koopatroopa
-//          0x05 = Peach
-//          0x06 = Daisy
-//          0x07 = Mario
-//          0x08 = Luigi
-//          0x09 = Wario
-//          0x0a = Waluigi
-//          0x0b = Yoshi
-//          0x0c = Birdo
-//          0x0d = Donkey Kong
-//          0x0e = Diddy Kong
-//          0x0f = Bowser
-//          0x10 = Bowser Jr
-//          0x11 = Toad
-//          0x12 = Toadette
-//          0x13 = King Boo
-//          0x14 = Petey
-function grand_prix_second_character() => dword_be(0x3B1250)
-
-// $3B1254: [32-bit BE] Grand Prix Kart ID
-//          0x00 = Red Fire
-//          0x01 = DK Jumbo
-//          0x02 = Turbo Yoshi
-//          0x03 = Koopa Dasher
-//          0x04 = Heart Coach
-//          0x05 = Goo Goo Buggy
-//          0x06 = Wario Car
-//          0x07 = Koopa King
-//          0x08 = Green Fire
-//          0x09 = Barrel Train
-//          0x0a = Turbo Birdo
-//          0x0b = Para Wing
-//          0x0c = Bloom Coach
-//          0x0d = Rattle Buggy
-//          0x0e = Waluigi Racer
-//          0x0f = Bullet Blaster
-//          0x10 = Toad Kart
-//          0x11 = Toadette Kart
-//          0x12 = Boo Pipes
-//          0x13 = Piranha Pipes
-//          0x14 = Parade Kart
-//          0xff = Not Selected
-function grand_prix_kart_id() => dword_be(0x3B1254)
-
-// $3B125C: [32-bit BE] Grand Prix Time
-function grand_prix_time() => dword_be(0x3B125C)
 
 // $3B128C: [32-bit BE] Grand Prix CC
 //          0x00 = 50cc
@@ -3850,16 +3767,154 @@ function game_state() => dword_be(0x3B0724)
 function race_pointer() => dword_be(0x3CC0A8)
 
 
+// $3A4B78: [32-bit BE] Prize Code Pointer (Time Trial Results]
+//          +0x1c270 = [8-bit] Prize Code Enabled
+//          ------------------- 0x00 = No
+//          ------------------- 0x01 = Yes
+//          +0x1c274 = [32-bit BE] Prize Code Combination
+// L,R,L,R,X,Y,X,Y,Z
+function prize_code_pointer_time_trial_results() => dword_be(0x3A4B78)
+
+// $3B124C: [32-bit BE] Grand Prix First Character
+//          0x00 = Char ID None
+//          0x01 = Baby Mario
+//          0x02 = Baby Luigi
+//          0x03 = Paratroopa
+//          0x04 = Koopatroopa
+//          0x05 = Peach
+//          0x06 = Daisy
+//          0x07 = Mario
+//          0x08 = Luigi
+//          0x09 = Wario
+//          0x0a = Waluigi
+//          0x0b = Yoshi
+//          0x0c = Birdo
+//          0x0d = Donkey Kong
+//          0x0e = Diddy Kong
+//          0x0f = Bowser
+//          0x10 = Bowser Jr
+//          0x11 = Toad
+//          0x12 = Toadette
+//          0x13 = King Boo
+//          0x14 = Petey
+function grand_prix_first_character() => dword_be(0x3B124C)
+
+// $3B1250: [32-bit BE] Grand Prix Second Character
+//          0x00 = Char ID None
+//          0x01 = Baby Mario
+//          0x02 = Baby Luigi
+//          0x03 = Paratroopa
+//          0x04 = Koopatroopa
+//          0x05 = Peach
+//          0x06 = Daisy
+//          0x07 = Mario
+//          0x08 = Luigi
+//          0x09 = Wario
+//          0x0a = Waluigi
+//          0x0b = Yoshi
+//          0x0c = Birdo
+//          0x0d = Donkey Kong
+//          0x0e = Diddy Kong
+//          0x0f = Bowser
+//          0x10 = Bowser Jr
+//          0x11 = Toad
+//          0x12 = Toadette
+//          0x13 = King Boo
+//          0x14 = Petey
+function grand_prix_second_character() => dword_be(0x3B1250)
+
+// $3B1254: [32-bit BE] Grand Prix Kart ID
+//          0x00 = Red Fire
+//          0x01 = DK Jumbo
+//          0x02 = Turbo Yoshi
+//          0x03 = Koopa Dasher
+//          0x04 = Heart Coach
+//          0x05 = Goo Goo Buggy
+//          0x06 = Wario Car
+//          0x07 = Koopa King
+//          0x08 = Green Fire
+//          0x09 = Barrel Train
+//          0x0a = Turbo Birdo
+//          0x0b = Para Wing
+//          0x0c = Bloom Coach
+//          0x0d = Rattle Buggy
+//          0x0e = Waluigi Racer
+//          0x0f = Bullet Blaster
+//          0x10 = Toad Kart
+//          0x11 = Toadette Kart
+//          0x12 = Boo Pipes
+//          0x13 = Piranha Pipes
+//          0x14 = Parade Kart
+//          0xff = Not Selected
+function grand_prix_kart_id() => dword_be(0x3B1254)
+
+
+
+function end_race_menu() => byte(0x3cb6d0)
+
+prize_code_offset = 0x1c270
+function prize_code_unlocked() => byte((prize_code_pointer_time_trial_results() & 0x17ffffff) + prize_code_offset)
+function prize_code_check() => prev(prize_code_unlocked()) == 0x00 && prize_code_unlocked() == 0x01
+function prize_code_time_trial() => game_state() == 0x03 && gamemode() == 0x01 && options_pointer() == 0x00 && race_completed_flag() == 0x01 && end_race_menu() == 0x01
+
 function grand_prix_completion() => prev(gamemode()) == 0x02 && gamemode() == 0x08
+function grand_prix_start() => game_state() == 0x03 && gamemode() == 0x02 && options_pointer() == 0x01 && race_completed_flag() == 0x00 && final_race_time() == 0x00 && current_race() == 0x00
+function grand_prix_time() => dword_be(0x3B125C)
+
+
+function race_start() => game_state() == 0x03 && gamemode() == 0x02 && options_pointer() == 0x01 && race_completed_flag() == 0x00 && final_race_time() == 0x00
+function race_reset() => game_state() != 0x03 || options_pointer() == 0x02
 
 function time_trial_start() => game_state() == 0x03 && gamemode() == 0x01 && options_pointer() == 0x01 && race_completed_flag() == 0x00 && final_race_time() >= 0x01
-
 function time_trial_reset() => game_state() != 0x03 || options_pointer() == 0x02
+function time_trial_check() => game_state() == 0x03 && gamemode() == 0x01 && options_pointer() == 0x01 && race_completed_flag() == 0x01 && end_race_menu() == 0x01
 
 final_time_offset = 0xf8
-
+final_time_offset_frames = 0xf4
 // Mimic Pointer &.
 function final_race_time() => dword_be((race_pointer() & 0x17ffffff) + final_time_offset)
+function final_race_time_frames() => dword_be((race_pointer() & 0x17ffffff) + final_time_offset_frames)
+
+
+function race_data_pointer() => dword_be(0x3cc118)
+
+track_obj_offset_time_trial = 0x8c
+track_obj_offset_grand_prix = 0x150
+function current_track_obj_time_trial() => dword_be((race_data_pointer() & 0x17ffffff) + track_obj_offset_time_trial)
+function current_track_obj_grand_prix() => dword_be((race_data_pointer() & 0x17ffffff) + track_obj_offset_grand_prix)
+
+function drifting_data_pointer() => dword_be(0x3cbf30)
+player_drift_offset = 0x394
+function player_drift() => dword_be((dword_be(0x3cbf30) & 0x17ffffff) + player_drift_offset)
+
+item_pointer_offset = 0x1b7c
+current_item_offset = 0x7c
+function item_pointer() => dword_be((race_data_pointer() & 0x17ffffff) + item_pointer_offset)
+function current_item() => dword_be((item_pointer() & 0x17ffffff) + current_item_offset)
+
+
+function lightning_check() => player_2_stun_animation_time() > 0 && player_3_stun_animation_time() > 0 && player_4_stun_animation_time() > 0 && player_5_stun_animation_time() > 0 && player_6_stun_animation_time() > 0 && player_7_stun_animation_time() > 0
+
+function special_check() => prev(current_item()) == 0x01 || prev(current_item()) == 0x04 || prev(current_item()) == 0x07 || prev(current_item()) == 0x08 || prev(current_item()) == 0x0b || prev(current_item()) == 0x0c || prev(current_item()) == 0x0e || prev(current_item()) == 0x11 || prev(current_item()) == 0x13 || prev(current_item()) == 0x15 || prev(current_item()) == 0x1b
+
+specials = {
+    "King Bowser Shell": 0x01,
+    "BK Banana": 0x04,
+    "Chain Chomp": 0x07,
+    "Bomb-omb": 0x08,
+    "Yoshi Egg": 0x0b,
+    "Golden Mushroom": 0x0c,
+    "Love Heart": 0x0e,
+    "Triple Green Shell": 0x11,
+    "Triple Red Shell": 0x13,
+    "Green Fireball / Red Fireball": 0x15,
+    "Birdo Egg": 0x1b,
+}
+
+
+
+
+
 
 screen = {
     "Title Screen": 0x00,
@@ -3924,13 +3979,96 @@ speed = {
     "None": 0xffffffff
 }
 
+items = {
+    "Green Shell": 0x00,
+    "King Bowser Shell": 0x01,
+    "Red Shell": 0x02,
+    "Banana": 0x03,
+    "BK Banana": 0x04,
+    "Mushroom": 0x05,
+    "Star": 0x06,
+    "Chain Chomp": 0x07,
+    "Bomb-omb": 0x08,
+    "Red Fireball": 0x09,
+    "Lightning": 0x0a,
+    "Yoshi Egg": 0x0b,
+    "Golden Mushroom": 0x0c,
+    "Spiny Shell": 0x0d,
+    "Love Heart": 0x0e,
+    "Fake Item Box": 0x0f,
+    "None": 0x10,
+    "Triple Green Shell": 0x11,
+    "Triple Mushroom": 0x12,
+    "Triple Red Shell": 0x13,
+    "Triple Green Shell (Unused)": 0x14,
+    "Green Fireball / Red Fireball": 0x15,
+    "Nothing": 0x16,
+    "Green Fireball (Unused)": 0x1a,
+    "Birdo Egg": 0x1b,
+}
 
+specials = {
+    "King Bowser Shell": 0x01,
+    "BK Banana": 0x04,
+    "Chain Chomp": 0x07,
+    "Bomb-omb": 0x08,
+    "Yoshi Egg": 0x0b,
+    "Golden Mushroom": 0x0c,
+    "Love Heart": 0x0e,
+    "Triple Green Shell": 0x11,
+    "Triple Red Shell": 0x13,
+    "Green Fireball / Red Fireball": 0x15,
+    "Birdo Egg": 0x1b,
+}
 
+karts = {
+    "Red Fire": 0x00,
+    "DK Jumbo": 0x01,
+    "Turbo Yoshi": 0x02,
+    "Koopa Dasher": 0x03,
+    "Heart Coach": 0x04,
+    "Goo Goo Buggy": 0x05,
+    "Wario Car": 0x06,
+    "Koopa King": 0x07,
+    "Green Fire": 0x08,
+    "Barrel Train": 0x09,
+    "Turbo Birdo": 0x0a,
+    "Para Wing": 0x0b,
+    "Bloom Coach": 0x0c,
+    "Rattle Buggy": 0x0d,
+    "Waluigi Racer": 0x0e,
+    "Bullet Blaster": 0x0f,
+    "Toad Kart": 0x10,
+    "Toadette Kart": 0x11,
+    "Boo Pipes": 0x12,
+    "Piranha Pipes": 0x13,
+    "Parade Kart": 0x14,
+    "Not Selected": 0xff
+}
 
-
-
-
-
+characters = {
+    "Char ID None": 0x00,
+    "Baby Mario": 0x01,
+    "Baby Luigi": 0x02,
+    "Paratroopa": 0x03,
+    "Koopatroopa": 0x04,
+    "Peach": 0x05,
+    "Daisy": 0x06,
+    "Mario": 0x07,
+    "Luigi": 0x08,
+    "Wario": 0x09,
+    "Waluigi": 0x0a,
+    "Yoshi": 0x0b,
+    "Birdo": 0x0c,
+    "Donkey Kong": 0x0d,
+    "Diddy Kong": 0x0e,
+    "Bowser": 0x0f,
+    "Bowser Jr": 0x10,
+    "Toad": 0x11,
+    "Toadette": 0x12,
+    "King Boo": 0x13,
+    "Petey": 0x14
+}
 
 // {0}: Item Unlocked, {1}: Value in Memory, {2}: Cup, {3}: Speed, {4}: Title, {5}: Points
 save_file_unlocks = {
@@ -4002,7 +4140,7 @@ perfect_score = {
 // Bowser Castle: 164690 2:44:690
 // Rainbow Road: 196476 3:16:476
 
-
+//{0}: Track, {1}: Time in Milleseconds, {2}: Title. {3}: String Time
 time_trials = {
     0: ["Luigi Circuit",86277,"All That's Missing is a Mansion to House This Ghost", "1:26:277"],
     1: ["Peach Beach", 80404, "Apparition on the Beach Side", "1:20:404"],
@@ -4022,12 +4160,27 @@ time_trials = {
     15: ["Rainbow Road", 196476, "The Final Remaining Star to Be Redeemed", "3:16:476"],
 }
 
+// {0}: Character 1, {1}: Character 2, {2}: Speed, {3}: Kart, {4}: Cup, {5}: Grand Prix Points, {6}: Title, {7}: Points
+grand_prix_character_specific = {
+    0: ["Mario", "Luigi", "150cc", "Green Fire", "Mushroom Cup", 40, "Partners in Plumbing", 10],
+    1: ["Yoshi", "Birdo", "150cc", "Turbo Birdo", "Flower Cup", 40, "Partners in Dino", 10],
+    2: ["Toad", "Toadette", "150cc", "Toadette Kart", "Star Cup", 40, "Partners in Fungi", 10],
+    3: ["Donkey Kong", "Diddy Kong", "150cc", "DK Jumbo", "Special Cup", 40, "Partners in Banana", 10],
+    4: ["Wario", "Waluigi", "150cc", "Wario Car", "All Cup Tour", 160, "Partners in Crime", 25],
+    5: ["Peach", "Daisy", "150cc Mirror", "Bloom Coach", "Mushroom Cup", 40, "Partners in Royalty", 10],
+    6: ["Baby Mario", "Baby Luigi", "150cc Mirror", "Rattle Buggy", "Flower Cup", 40, "Partners in Time", 10],
+    7: ["Koopatroopa", "Paratroopa", "150cc Mirror", "Para Wing", "Star Cup", 40, "Partners in Shells", 10],
+    8: ["Bowser", "Bowser Jr", "150cc Mirror", "Koopa King", "Special Cup", 40, "Partners in Chaos", 10],
+    9: ["King Boo", "Petey", "150cc Mirror", "Boo Pipes", "All Cup Tour", 160, "Partners in Night and Shine", 25]
+}
+
 
 for unlock in save_file_unlocks {
     achievement (
         title=save_file_unlocks[unlock][4],
         description="Unlock the " + save_file_unlocks[unlock][0] + " by getting Gold on " + save_file_unlocks[unlock][3] + " " + save_file_unlocks[unlock][2],
         points=save_file_unlocks[unlock][5],
+        type="progression",
         trigger=
         grand_prix_completion() &&
         cup() == cups[save_file_unlocks[unlock][2]] &&
@@ -4040,6 +4193,7 @@ achievement (
     title="Double the Gold Double the Dash",
     description="Unlock the " + "Alternate Opening Screen" + " by getting Gold on every Cup",
     points=25,
+    type="win_condition",
     trigger=
     grand_prix_completion() &&
     prev(bit5(save_file_unlockables_4())) == 0 && bit5(save_file_unlockables_4()) == 1
@@ -4060,14 +4214,10 @@ for unlock in perfect_score {
     )
 }
 
-// Check Gamemode, gamestate, reset if not ingame, check if ghost, check if race completed, check current track, check if better time, reset on retry, 
-
-
-// 
 for unlock in time_trials {
     achievement (
         title=time_trials[unlock][2],
-        description="Defeat the Staff Ghost on " + time_trials[unlock][0] + " by having a Time Trial time of " + time_trials[unlock][3],
+        description="Defeat the Staff Ghost on " + time_trials[unlock][0] + " by having a Time Trial time better than " + time_trials[unlock][3],
         points=25,
         trigger=
         once(time_trial_start() && track_id() == tracks[time_trials[unlock][0]]) &&
@@ -4076,3 +4226,130 @@ for unlock in time_trials {
         never(time_trial_reset())
     )
 }
+
+
+achievement (
+    title="The Winner is You!",
+    description="Recieve your prize code after completing a Time Trial.",
+    points=1,
+    trigger=prize_code_time_trial() && prize_code_check()
+)
+
+
+// {0}: Character 1, {1}: Character 2, {2}: Speed, {3}: Kart, {4}: Cup, {5}: Grand Prix Points, {6}: Title, {7}: Points
+for unlock in grand_prix_character_specific {
+    achievement (
+        title=grand_prix_character_specific[unlock][6],
+        description="Using " +  grand_prix_character_specific[unlock][0] + " and " + grand_prix_character_specific[unlock][1] + " with the " + grand_prix_character_specific[unlock][3] + " get a Perfect Grand Prix Score of " + grand_prix_character_specific[unlock][5] + " on " + grand_prix_character_specific[unlock][2] + " " + grand_prix_character_specific[unlock][4],
+        points=grand_prix_character_specific[unlock][7],
+        trigger=
+        grand_prix_completion() &&
+        grand_prix_first_character() == characters[grand_prix_character_specific[unlock][0]] &&
+        grand_prix_second_character() == characters[grand_prix_character_specific[unlock][1]] &&
+        grand_prix_kart_id() == karts[grand_prix_character_specific[unlock][3]] &&
+        cup() == cups[grand_prix_character_specific[unlock][4]] &&
+        cc() == speed[grand_prix_character_specific[unlock][2]] &&
+        player_points() == grand_prix_character_specific[unlock][5]
+    )
+}
+
+
+// Misc
+// Use Every Special Item at least once in a session. doable
+achievement (
+    title="A Beachside Secret",
+    description="Discover and use the Hidden Pipe in Peach Beach",
+    points=1,
+    trigger=
+    game_state() == 0x03 && options_pointer() == 0x01 && race_completed_flag() == 0x00 &&
+    (gamemode() == 0x01 && current_track_obj_time_trial() == 0x0d || gamemode() == 0x02 && current_track_obj_grand_prix() == 0x0d) &&
+    track_id() == tracks["Peach Beach"]
+)
+
+achievement (
+    title="The Bridge's Hidden Side Path",
+    description="Discover and use the Hidden Pipe in Mushroom Bridge",
+    points=1,
+    trigger=
+    game_state() == 0x03 && options_pointer() == 0x01 && race_completed_flag() == 0x00 &&
+    (gamemode() == 0x01 && current_track_obj_time_trial() == 0x0d || gamemode() == 0x02 && current_track_obj_grand_prix() == 0x0d) &&
+    track_id() == tracks["Mushroom Bridge"]
+)
+
+achievement (
+    title="The Cruiser's Hidden Basement",
+    description="Discover and use the Hidden Pipe in Daisy Cruiser",
+    points=1,
+    trigger=
+    game_state() == 0x03 && options_pointer() == 0x01 && race_completed_flag() == 0x00 &&
+    (gamemode() == 0x01 && current_track_obj_time_trial() == 0x09 || gamemode() == 0x02 && current_track_obj_grand_prix() == 0x09) &&
+    track_id() == tracks["Daisy Cruiser"]
+)
+
+achievement (
+    title="How Does This Help Me",
+    description="In a Grand Prix race use a Blue Shell in First Place and await your Punishment",
+    points=2,
+    trigger=
+    game_state() == 0x03 && gamemode() == 0x02 && options_pointer() == 0x01 && race_completed_flag() == 0x00 &&
+    player_1_current_place() == 0x01 && prev(item_pointer()) > 0 && prev(current_item()) == items["Spiny Shell"] && item_pointer() == 0
+)
+
+
+// {0}: Title, {1}: Description, {2}: Code, {3}: Points
+misc_specific = {
+    0: ["Kart Needs Some Repairs", "Get First in a Grand Prix race without Drifting", never(player_drift() >= 1), 2],
+    1: ["An Old-Fashioned Way of Karting", "Get First in a Grand Prix race without Mini-Turbos and Items", never(player_drift() >=2) && never(item_pointer() > 0) && never(player_1_character_1_has_item() != 0 || player_1_character_2_has_item() != 0), 2 ],
+    2: ["Welcome To the Driver's Test", "Get First in a Grand Prix race without hitting Obstacles or Items", never(player_1_hit_animation_time() > 0), 2],
+    3: ["A Shocking Turn of Events", "Get First in a Grand Prix race after stunning everyone with the Lightning Bolt twice", measured(repeated(2,prev(item_pointer()) > 0 && prev(current_item()) == items["Lightning"] && item_pointer() == 0 && lightning_check())), 10],
+}
+
+for unlock in misc_specific {
+    achievement (
+        title=misc_specific[unlock][0],
+        description=misc_specific[unlock][1],
+        points=misc_specific[unlock][3],
+        trigger=
+        once(race_start()) &&
+        trigger_when(prev(race_completed_flag()) == 0x00 && race_completed_flag() == 0x01) &&
+        player_1_current_place() == 0x01 &&
+        never(race_reset()) && misc_specific[unlock][2]
+    )
+}
+
+achievement (
+    title="Specialty in Racing",
+    description="In a Grand Prix race use Special Items at least 5 times",
+    points=5,
+    trigger=
+    once(race_start()) && 
+    trigger_when(prev(race_completed_flag()) == 0x00 && race_completed_flag() == 0x01) &&
+    measured(repeated(5, prev(item_pointer()) > 0 && special_check() && item_pointer() == 0)) && 
+    never(race_reset())
+)
+
+achievement (
+    title="Superior Haunting Skills",
+    description="Defeat any Staff Ghost Time Trial without using the given Mushrooms",
+    points=25,
+    trigger=
+    once(time_trial_start()) &&
+    trigger_when(prev(race_completed_flag()) == 0x00 && race_completed_flag() == 0x01) &&
+    any_of(time_trials, i => track_id() == tracks[time_trials[i][0]] && final_race_time() < time_trials[i][1]) &&
+    player_1_character_1_has_item() == 0x01 && player_1_character_2_has_item() == 0x01 &&
+    never(time_trial_reset())
+)
+
+for leaderboard in time_trials {
+    leaderboard(
+        title="Time Trial: " + time_trials[leaderboard][0], 
+        description="Fastest Time Trial time on " + time_trials[leaderboard][0], 
+        start=time_trial_start() && track_id() == tracks[time_trials[leaderboard][0]], 
+        cancel=time_trial_reset(), 
+        submit=prev(race_completed_flag()) == 0x00 && race_completed_flag() == 0x01, 
+        value=final_race_time_frames(), 
+        format="FRAMES", 
+        lower_is_better=true)
+}
+
+// To do: Grand Prix leaderboards, RP, art, final testing
