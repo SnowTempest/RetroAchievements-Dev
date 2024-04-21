@@ -4353,3 +4353,14 @@ for leaderboard in time_trials {
 }
 
 // To do: Grand Prix leaderboards, RP, art, final testing
+
+// {0}: Cup, {1}: Speed, {2}: Grand Prix Point Requirement, {3}: Title, {4}: Points
+perfect_score = {
+
+for leaderboard in perfect_score {
+    leaderboard (
+        title="Grand Prix Time: " + perfect_score[leaderboard][0] + " on " + perfect_score[leaderboard][1],
+        description="Fastest Grand Prix Clear time on " + perfect_score[leaderboard][0] + " on " + perfect_score[leaderboard][1],
+        
+    )
+}
