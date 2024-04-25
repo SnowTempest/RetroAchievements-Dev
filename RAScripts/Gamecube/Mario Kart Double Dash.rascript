@@ -4349,18 +4349,25 @@ for leaderboard in time_trials {
         submit=prev(race_completed_flag()) == 0x00 && race_completed_flag() == 0x01, 
         value=final_race_time_frames(), 
         format="FRAMES", 
-        lower_is_better=true)
+        lower_is_better=true
+    )
 }
 
 // To do: Grand Prix leaderboards, RP, art, final testing
 
 // {0}: Cup, {1}: Speed, {2}: Grand Prix Point Requirement, {3}: Title, {4}: Points
-perfect_score = {
+
+function grand_prix_time_to_frame() => (grand_prix_time() / 10)
 
 for leaderboard in perfect_score {
     leaderboard (
         title="Grand Prix Time: " + perfect_score[leaderboard][0] + " on " + perfect_score[leaderboard][1],
         description="Fastest Grand Prix Clear time on " + perfect_score[leaderboard][0] + " on " + perfect_score[leaderboard][1],
-        
+        start=grand_prix_start() && cup() == cups[perfect_score[leaderboard][0]] && cc() == speed[perfect_score[leaderboard][1]],
+        cancel=game_state() < 0x03 || gamemode() == 0x01,
+        submit=grand_prix_completion(),
+        value=grand_prix_time_to_frame(),
+        format="MILLISECS",
+        lower_is_better=true
     )
 }
