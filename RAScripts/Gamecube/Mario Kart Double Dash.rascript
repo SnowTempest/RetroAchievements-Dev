@@ -750,7 +750,7 @@ save_file_unlocks = {
     8: ["Para Wing", bit1(save_file_unlockables_2()), "Star Cup", "50cc", "There's a Feather Hidden Inside Somewhere", 2],
     9: ["Special Cup", bit3(save_file_unlockables_4()), "Star Cup", "100cc", "This One's Special to Me", 3],
     10: ["Barrel Train", bit2(save_file_unlockables_2()), "Star Cup", "150cc", "All Aboard the Barrel Express", 5],
-    11: ["Petey Piranha & King Boo Partner Duo", bit1(save_file_unlockables_4()), "Star Cup", "150cc Mirror", "The Bosses of Shine and Night", 5],
+    11: ["Petey Piranha & King Boo Partner Duo", bit1(save_file_unlockables_4()), "Star Cup", "150cc Mirror", "A King and His Piranha Friend", 5],
     12: ["Bullet Blaster", bit3(save_file_unlockables_2()), "Special Cup", "50cc", "Faster Than a Speeding Bull-... Wait", 2],
     13: ["Toad & Toadette Partner Duo", bit0(save_file_unlockables_4()), "Special Cup", "100cc", "Mushroom Kingdom's Finest Fungi", 3],
     14: ["All Cup Tour", bit4(save_file_unlockables_4()), "Special Cup", "150cc", "Mario-Kart World Tour", 5],
@@ -832,11 +832,11 @@ grand_prix_character_specific = {
     0: ["Mario", "Luigi", "150cc", "Green Fire", "Mushroom Cup", 40, "Partners in Plumbing", 10],
     1: ["Yoshi", "Birdo", "150cc", "Turbo Birdo", "Flower Cup", 40, "Partners in Dino", 10],
     2: ["Toad", "Toadette", "150cc", "Toadette Kart", "Star Cup", 40, "Partners in Fungi", 10],
-    3: ["Donkey Kong", "Diddy Kong", "150cc", "DK Jumbo", "Special Cup", 40, "Partners in Banana", 10],
+    3: ["Donkey Kong", "Diddy Kong", "150cc", "DK Jumbo", "Special Cup", 40, "Partners in Country", 10],
     4: ["Wario", "Waluigi", "150cc", "Wario Car", "All Cup Tour", 160, "Partners in Crime", 25],
     5: ["Peach", "Daisy", "150cc Mirror", "Bloom Coach", "Mushroom Cup", 40, "Partners in Royalty", 10],
     6: ["Baby Mario", "Baby Luigi", "150cc Mirror", "Rattle Buggy", "Flower Cup", 40, "Partners in Time", 10],
-    7: ["Koopatroopa", "Paratroopa", "150cc Mirror", "Para Wing", "Star Cup", 40, "Partners in Shells", 10],
+    7: ["Koopatroopa", "Paratroopa", "150cc Mirror", "Para Wing", "Star Cup", 40, "Partners in Koopa", 10],
     8: ["Bowser", "Bowser Jr", "150cc Mirror", "Koopa King", "Special Cup", 40, "Partners in Chaos", 10],
     9: ["King Boo", "Petey", "150cc Mirror", "Boo Pipes", "All Cup Tour", 160, "Partners in Night and Shine", 25]
 }
