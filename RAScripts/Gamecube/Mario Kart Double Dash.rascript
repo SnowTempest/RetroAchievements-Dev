@@ -741,18 +741,18 @@ characters = {
 save_file_unlocks = {
     0: ["Green Fire", bit6(save_file_unlockables_2()), "Mushroom Cup", "50cc", "The Result of Copper Sulfate", 2],
     1: ["Rattle Buggy", bit0(save_file_unlockables_2()), "Mushroom Cup", "100cc", "Mobilized Crib", 3],
-    2: ["Luigi's Mansion Battle Stage", bit7(save_file_unlockables_4()), "Mushroom Cup", "150cc", "Spectral Battlegrounds Reimagined", 5],
+    2: ["Luigi's Mansion Battle Mode stage", bit7(save_file_unlockables_4()), "Mushroom Cup", "150cc", "Spectral Battlegrounds Reimagined", 5],
     3: ["Toadette Kart", bit5(save_file_unlockables_2()), "Mushroom Cup", "150cc Mirror", "Toadette's Pretty Pink Racecar", 5],
     4: ["Bloom Coach",bit7(save_file_unlockables_2()) ,"Flower Cup", "50cc", "Sarasaland's Personal Escort Vehicle", 2],
     5: ["Waluigi Racer",bit1(save_file_unlockables_1()) ,"Flower Cup", "100cc", "A Front Bumper Only Fit for Its Owner", 3],
     6: ["Turbo Birdo",bit0(save_file_unlockables_1()) ,"Flower Cup", "150cc", "Will This Also Shoot Eggs at Me", 5],
-    7: ["Tilt-A-Kart Battle Stage",bit0(save_file_unlockables_3()) ,"Flower Cup", "150cc Mirror", "Mario's Tilting His Way into 3D", 5],
+    7: ["Tilt-A-Kart Battle Mode stage",bit0(save_file_unlockables_3()) ,"Flower Cup", "150cc Mirror", "Mario's Tilting His Way into 3D", 5],
     8: ["Para Wing", bit1(save_file_unlockables_2()), "Star Cup", "50cc", "There's a Feather Hidden Inside Somewhere", 2],
     9: ["Special Cup", bit3(save_file_unlockables_4()), "Star Cup", "100cc", "This One's Special to Me", 3],
     10: ["Barrel Train", bit2(save_file_unlockables_2()), "Star Cup", "150cc", "All Aboard the Barrel Express", 5],
-    11: ["Petey Piranha & King Boo Partner Duo", bit1(save_file_unlockables_4()), "Star Cup", "150cc Mirror", "A King and His Piranha Friend", 5],
+    11: ["Petey Piranha and King Boo", bit1(save_file_unlockables_4()), "Star Cup", "150cc Mirror", "A King and His Piranha Friend", 5],
     12: ["Bullet Blaster", bit3(save_file_unlockables_2()), "Special Cup", "50cc", "Faster Than a Speeding Bull-... Wait", 2],
-    13: ["Toad & Toadette Partner Duo", bit0(save_file_unlockables_4()), "Special Cup", "100cc", "Mushroom Kingdom's Finest Fungi", 3],
+    13: ["Toad and Toadette", bit0(save_file_unlockables_4()), "Special Cup", "100cc", "Mushroom Kingdom's Finest Fungi", 3],
     14: ["All Cup Tour", bit4(save_file_unlockables_4()), "Special Cup", "150cc", "Mario-Kart World Tour", 5],
     15: ["Boo Pipes", bit3(save_file_unlockables_1()), "Special Cup", "150cc Mirror", "Pipes Connected to Lonely Spirits", 5],
     16: ["Mirror Mode", bit2(save_file_unlockables_4()), "All Cup Tour", "150cc", "I Can See My Reflection", 10],
@@ -763,24 +763,24 @@ save_file_unlocks = {
 perfect_score = {
     0: ["Mushroom Cup", "50cc", 40, "Mushroom Cup Perfection I",3],
     1: ["Mushroom Cup", "100cc", 40, "Mushroom Cup Perfection II", 5],
-    2: ["Mushroom Cup", "150cc", 40, "Mushroom Cup Perfection III", 10],
-    3: ["Mushroom Cup", "150cc Mirror", 40, "III noitcerefP puC murohsuM", 10],
+    2: ["Mushroom Cup", "150cc", 40, "[Void] Mushroom Cup Perfection III", 10],
+    3: ["Mushroom Cup", "150cc Mirror", 40, "[Void] III noitcerefP puC murohsuM", 10],
     4: ["Flower Cup", "50cc", 40, "Flower Cup Perfection I", 3],
     5: ["Flower Cup", "100cc", 40, "Flower Cup Perfection II", 5],
-    6: ["Flower Cup", "150cc", 40, "Flower Cup Perfection III", 10],
-    7: ["Flower Cup", "150cc Mirror", 40, "III noitcerefP puC rewoF", 10],
+    6: ["Flower Cup", "150cc", 40, "[Void] Flower Cup Perfection III", 10],
+    7: ["Flower Cup", "150cc Mirror", 40, "[Void] III noitcerefP puC rewoF", 10],
     8: ["Star Cup", "50cc", 40, "Star Cup Perfection I", 3],
     9: ["Star Cup", "100cc", 40, "Star Cup Perfection II", 5],
-    10: ["Star Cup", "150cc", 40, "Star Cup Perfection III", 10],
-    11: ["Star Cup", "150cc Mirror", 40, "III noitcerefP puC ratS", 10],
+    10: ["Star Cup", "150cc", 40, "[Void] Star Cup Perfection III", 10],
+    11: ["Star Cup", "150cc Mirror", 40, "[Void] III noitcerefP puC ratS", 10],
     12: ["Special Cup", "50cc", 40, "Special Cup Perfection I", 3],
     13: ["Special Cup", "100cc", 40, "Special Cup Perfection II", 5],
-    14: ["Special Cup", "150cc", 40, "Special Cup Perfection III", 10],
-    15: ["Special Cup", "150cc Mirror", 40, "III noitcerefP puC laicepS", 10],
+    14: ["Special Cup", "150cc", 40, "[Void] Special Cup Perfection III", 10],
+    15: ["Special Cup", "150cc Mirror", 40, "[Void] III noitcerefP puC laicepS", 10],
     16: ["All Cup Tour", "50cc", 160, "All Cup Tour Perfection I", 5],
     17: ["All Cup Tour", "100cc", 160, "All Cup Tour Perfection II", 10],
-    18: ["All Cup Tour", "150cc", 160, "All Cup Tour Perfection III", 10],
-    19: ["All Cup Tour", "150cc Mirror", 160, "III noitcerefP ruoT puC llA", 25],
+    18: ["All Cup Tour", "150cc", 160, "[Void] All Cup Tour Perfection III", 10],
+    19: ["All Cup Tour", "150cc Mirror", 160, "[Void] III noitcerefP ruoT puC llA", 25],
 }
 
 
@@ -845,7 +845,7 @@ grand_prix_character_specific = {
 for unlock in save_file_unlocks {
     achievement (
         title=save_file_unlocks[unlock][4],
-        description="Unlock the " + save_file_unlocks[unlock][0] + " by getting Gold on " + save_file_unlocks[unlock][3] + " " + save_file_unlocks[unlock][2],
+        description="Unlock the " + save_file_unlocks[unlock][0] + " by getting a gold trophy on the " + save_file_unlocks[unlock][3] + " " + save_file_unlocks[unlock][2],
         points=save_file_unlocks[unlock][5],
         type="progression",
         trigger=
@@ -857,8 +857,8 @@ for unlock in save_file_unlocks {
 }
 
 achievement ( 
-    title="Double the Gold Double the Dash",
-    description="Unlock the " + "Alternate Opening Screen" + " by getting Gold on every Cup",
+    title="Double the Gold, Double the Dash",
+    description="Unlock the " + "alternate opening screen" + " by getting a gold trophy on every Cup",
     points=25,
     type="win_condition",
     trigger=
@@ -870,7 +870,7 @@ achievement (
 for unlock in perfect_score {
     achievement (
         title=perfect_score[unlock][3],
-        description="Get a Perfect Grand Prix Score of " + perfect_score[unlock][2] + " on " + perfect_score[unlock][1] + " " + perfect_score[unlock][0],
+        description="Get a perfect score of " + perfect_score[unlock][2] + " on the " + perfect_score[unlock][1] + " " + perfect_score[unlock][0],
         points=perfect_score[unlock][4],
         trigger=
         grand_prix_completion() &&
@@ -897,7 +897,7 @@ for unlock in time_trials {
 
 achievement (
     title="The Winner is You!",
-    description="Recieve your prize code after completing a Time Trial.",
+    description="Recieve your prize code after completing a Time Trial",
     points=1,
     trigger=prize_code_time_trial() && prize_code_check()
 )
@@ -907,7 +907,7 @@ achievement (
 for unlock in grand_prix_character_specific {
     achievement (
         title=grand_prix_character_specific[unlock][6],
-        description="Using " +  grand_prix_character_specific[unlock][0] + " and " + grand_prix_character_specific[unlock][1] + " with the " + grand_prix_character_specific[unlock][3] + " get a Perfect Grand Prix Score of " + grand_prix_character_specific[unlock][5] + " on " + grand_prix_character_specific[unlock][2] + " " + grand_prix_character_specific[unlock][4],
+        description="Using " +  grand_prix_character_specific[unlock][0] + " and " + grand_prix_character_specific[unlock][1] + " with the " + grand_prix_character_specific[unlock][3] + ", get a perfect score of " + grand_prix_character_specific[unlock][5] + " on the " + grand_prix_character_specific[unlock][2] + " " + grand_prix_character_specific[unlock][4],
         points=grand_prix_character_specific[unlock][7],
         trigger=
         grand_prix_completion() &&
@@ -925,7 +925,7 @@ for unlock in grand_prix_character_specific {
 // Use Every Special Item at least once in a session. doable
 achievement (
     title="A Beachside Secret",
-    description="Discover and use the Hidden Pipe in Peach Beach",
+    description="Discover and use the hidden pipe in Peach Beach",
     points=1,
     trigger=
     game_state() == 0x03 && options_pointer() == 0x01 && race_completed_flag() == 0x00 &&
@@ -935,7 +935,7 @@ achievement (
 
 achievement (
     title="The Bridge's Hidden Side Path",
-    description="Discover and use the Hidden Pipe in Mushroom Bridge",
+    description="Discover and use the hidden pipe in Mushroom Bridge",
     points=1,
     trigger=
     game_state() == 0x03 && options_pointer() == 0x01 && race_completed_flag() == 0x00 &&
@@ -945,7 +945,7 @@ achievement (
 
 achievement (
     title="The Cruiser's Hidden Basement",
-    description="Discover and use the Hidden Pipe in Daisy Cruiser",
+    description="Discover and use the hidden pipe in Daisy Cruiser",
     points=1,
     trigger=
     game_state() == 0x03 && options_pointer() == 0x01 && race_completed_flag() == 0x00 &&
@@ -955,7 +955,7 @@ achievement (
 
 achievement (
     title="How Does This Help Me",
-    description="In a Grand Prix race use a Blue Shell in First Place and await your Punishment",
+    description="In a Grand Prix race, use a Blue Shell in first place and await your punishment",
     points=2,
     trigger=
     game_state() == 0x03 && gamemode() == 0x02 && options_pointer() == 0x01 && race_completed_flag() == 0x00 &&
@@ -965,10 +965,10 @@ achievement (
 
 // {0}: Title, {1}: Description, {2}: Code, {3}: Points
 misc_specific = {
-    0: ["Kart Needs Some Repairs", "Get First in a Grand Prix race without Drifting", never(player_drift() >= 1), 2],
-    1: ["An Old-Fashioned Way of Karting", "Get First in a Grand Prix race without Mini-Turbos and Items", never(player_drift() >=2) && never(item_pointer() > 0) && never(player_1_character_1_has_item() != 0 || player_1_character_2_has_item() != 0), 2 ],
-    2: ["Welcome To the Driver's Test", "Get First in a Grand Prix race without hitting Obstacles or Items", never(player_1_hit_animation_time() > 0), 2],
-    3: ["A Shocking Turn of Events", "Get First in a Grand Prix race after stunning everyone with the Lightning Bolt twice", measured(repeated(2,prev(item_pointer()) > 0 && prev(current_item()) == items["Lightning"] && item_pointer() == 0 && lightning_check())), 10],
+    0: ["Kart Needs Some Repairs", "Get first in a grand prix race without Drifting", never(player_drift() >= 1), 2],
+    1: ["An Old-Fashioned Way of Karting", "Get first in a grand prix race without mini-turbos and using items", never(player_drift() >=2) && never(item_pointer() > 0) && never(player_1_character_1_has_item() != 0 || player_1_character_2_has_item() != 0), 2 ],
+    2: ["Welcome to the Driver's Test", "Get first in a grand prix race without hitting obstacles or enemy items", never(player_1_hit_animation_time() > 0), 2],
+    3: ["A Shocking Turn of Events", "Get first in a grand prix race after stunning everyone with the Lightning Bolt twice", measured(repeated(2,prev(item_pointer()) > 0 && prev(current_item()) == items["Lightning"] && item_pointer() == 0 && lightning_check())), 10],
 }
 
 for unlock in misc_specific {
