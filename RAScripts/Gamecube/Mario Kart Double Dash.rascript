@@ -1014,7 +1014,7 @@ for leaderboard in time_trials {
         start=time_trial_start() && track_id() == tracks[time_trials[leaderboard][0]], 
         cancel=time_trial_reset(), 
         submit=prev(race_completed_flag()) == 0x00 && race_completed_flag() == 0x01, 
-        value=final_race_time_frames(), 
+        value=current_race_time(), 
         format="FRAMES", 
         lower_is_better=true
     )
