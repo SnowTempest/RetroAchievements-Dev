@@ -569,6 +569,25 @@ function time_trial_character_1() => byte((saving_pointer() & 0x17ffffff))
 function time_trial_character_2() => byte((saving_pointer() & 0x17ffffff) + 0x1)
 function time_trial_kart() => byte((saving_pointer() & 0x17ffffff) + 0x2)
 
+function current_driver() => byte(0x3CB750)
+
+
+function partner_order_pointer() => dword_be(0x003cb740)
+function partner_swap_time() => dword_be((partner_order_pointer() & 0x17ffffff) + 0x1dd0)
+
+function current_passenger() => dword_be((partner_order_pointer() & 0x17ffffff) + 0x1dd0)
+
+
+function player_1_character_1_has_item() => dword_be(0x37FF70)
+function player_1_character_2_has_item() => dword_be(0x37FF74)
+
+function player_one_has_usable_item() => player_1_character_1_has_item() == 0x01 && current_passenger() == 0x00
+function player_two_has_usable_item() => player_1_character_2_has_item() == 0x01 && current_passenger() == 0x01
+
+function item_used() => bit3(0x3B442A) + bit2(0x3B442A) == 1 && prev(bit3(0x3B442A)) + prev(bit2(0x3B442A)) == 0 && partner_swap_time() == 38 && player_1_hit_animation_time() == 0 && paused() != 1
+
+function paused() => byte(0x003cb6dc)
+
 specials = {
     "King Bowser Shell": 0x01,
     "BK Banana": 0x04,
@@ -739,46 +758,50 @@ characters = {
 
 // {0}: Item Unlocked, {1}: Value in Memory, {2}: Cup, {3}: Speed, {4}: Title, {5}: Points
 save_file_unlocks = {
-    0: ["Green Fire", bit6(save_file_unlockables_2()), "Mushroom Cup", "50cc", "The Result of Copper Sulfate", 2],
-    1: ["Rattle Buggy", bit0(save_file_unlockables_2()), "Mushroom Cup", "100cc", "Mobilized Crib", 3],
-    2: ["Luigi's Mansion Battle Mode stage", bit7(save_file_unlockables_4()), "Mushroom Cup", "150cc", "Spectral Battlegrounds Reimagined", 5],
-    3: ["Toadette Kart", bit5(save_file_unlockables_2()), "Mushroom Cup", "150cc Mirror", "Toadette's Pretty Pink Racecar", 5],
-    4: ["Bloom Coach",bit7(save_file_unlockables_2()) ,"Flower Cup", "50cc", "Sarasaland's Personal Escort Vehicle", 2],
-    5: ["Waluigi Racer",bit1(save_file_unlockables_1()) ,"Flower Cup", "100cc", "A Front Bumper Only Fit for Its Owner", 3],
-    6: ["Turbo Birdo",bit0(save_file_unlockables_1()) ,"Flower Cup", "150cc", "Will This Also Shoot Eggs at Me", 5],
-    7: ["Tilt-A-Kart Battle Mode stage",bit0(save_file_unlockables_3()) ,"Flower Cup", "150cc Mirror", "Mario's Tilting His Way into 3D", 5],
-    8: ["Para Wing", bit1(save_file_unlockables_2()), "Star Cup", "50cc", "There's a Feather Hidden Inside Somewhere", 2],
-    9: ["Special Cup", bit3(save_file_unlockables_4()), "Star Cup", "100cc", "This One's Special to Me", 3],
-    10: ["Barrel Train", bit2(save_file_unlockables_2()), "Star Cup", "150cc", "All Aboard the Barrel Express", 5],
-    11: ["Petey Piranha and King Boo", bit1(save_file_unlockables_4()), "Star Cup", "150cc Mirror", "A King and His Piranha Friend", 5],
-    12: ["Bullet Blaster", bit3(save_file_unlockables_2()), "Special Cup", "50cc", "Faster Than a Speeding Bull-... Wait", 2],
-    13: ["Toad and Toadette", bit0(save_file_unlockables_4()), "Special Cup", "100cc", "Mushroom Kingdom's Finest Fungi", 3],
-    14: ["All Cup Tour", bit4(save_file_unlockables_4()), "Special Cup", "150cc", "Mario-Kart World Tour", 5],
-    15: ["Boo Pipes", bit3(save_file_unlockables_1()), "Special Cup", "150cc Mirror", "Pipes Connected to Lonely Spirits", 5],
-    16: ["Mirror Mode", bit2(save_file_unlockables_4()), "All Cup Tour", "150cc", "I Can See My Reflection", 10],
-    17: ["Parade Kart", bit4(save_file_unlockables_1()), "All Cup Tour", "150cc Mirror", "One Final Parade for You, the Player", 10],
+    0: ["Green Fire", bit6(save_file_unlockables_2()), "Mushroom Cup", "50cc", "The Result of Copper Sulfate", 3],
+    1: ["Rattle Buggy", bit0(save_file_unlockables_2()), "Mushroom Cup", "100cc", "Mobilized Crib", 5],
+    2: ["Luigi's Mansion Battle Mode stage", bit7(save_file_unlockables_4()), "Mushroom Cup", "150cc", "Spectral Battlegrounds Reimagined", 10],
+    3: ["Toadette Kart", bit5(save_file_unlockables_2()), "Mushroom Cup", "150cc Mirror", "Toadette's Pretty Pink Racecar", 10],
+
+    4: ["Bloom Coach",bit7(save_file_unlockables_2()) ,"Flower Cup", "50cc", "Sarasaland's Personal Escort Vehicle", 3],
+    5: ["Waluigi Racer",bit1(save_file_unlockables_1()) ,"Flower Cup", "100cc", "A Front Bumper Only Fit for Its Owner", 5],
+    6: ["Turbo Birdo",bit0(save_file_unlockables_1()) ,"Flower Cup", "150cc", "Will This Also Shoot Eggs at Me", 10],
+    7: ["Tilt-A-Kart Battle Mode stage",bit0(save_file_unlockables_3()) ,"Flower Cup", "150cc Mirror", "Mario's Tilting His Way into 3D", 10],
+
+    8: ["Para Wing", bit1(save_file_unlockables_2()), "Star Cup", "50cc", "There's a Feather Hidden Inside Somewhere", 3],
+    9: ["Special Cup", bit3(save_file_unlockables_4()), "Star Cup", "100cc", "This One's Special to Me", 5],
+    10: ["Barrel Train", bit2(save_file_unlockables_2()), "Star Cup", "150cc", "All Aboard the Barrel Express", 10],
+    11: ["Petey Piranha and King Boo Duo", bit1(save_file_unlockables_4()), "Star Cup", "150cc Mirror", "A King and His Piranha Friend", 10],
+
+    12: ["Bullet Blaster", bit3(save_file_unlockables_2()), "Special Cup", "50cc", "Faster Than a Speeding Bull-... Wait", 3],
+    13: ["Toad and Toadette Duo", bit0(save_file_unlockables_4()), "Special Cup", "100cc", "Mushroom Kingdom's Finest Fungi", 5],
+    14: ["All Cup Tour", bit4(save_file_unlockables_4()), "Special Cup", "150cc", "Mario-Kart World Tour", 10],
+    15: ["Boo Pipes", bit3(save_file_unlockables_1()), "Special Cup", "150cc Mirror", "Pipes Connected to Lonely Spirits", 10],
+
+    16: ["Mirror Mode", bit2(save_file_unlockables_4()), "All Cup Tour", "150cc", "I Can See My Reflection", 25],
+    17: ["Parade Kart", bit4(save_file_unlockables_1()), "All Cup Tour", "150cc Mirror", "One Final Parade for You, the Player", 25],
 }
 
 // {0}: Cup, {1}: Speed, {2}: Grand Prix Point Requirement, {3}: Title, {4}: Points
 perfect_score = {
-    0: ["Mushroom Cup", "50cc", 40, "Mushroom Cup Perfection I",3],
-    1: ["Mushroom Cup", "100cc", 40, "Mushroom Cup Perfection II", 5],
+    0: ["Mushroom Cup", "50cc", 40, "Mushroom Cup Perfection I",5],
+    1: ["Mushroom Cup", "100cc", 40, "Mushroom Cup Perfection II", 10],
     2: ["Mushroom Cup", "150cc", 40, "[Void] Mushroom Cup Perfection III", 10],
     3: ["Mushroom Cup", "150cc Mirror", 40, "[Void] III noitcerefP puC murohsuM", 10],
-    4: ["Flower Cup", "50cc", 40, "Flower Cup Perfection I", 3],
-    5: ["Flower Cup", "100cc", 40, "Flower Cup Perfection II", 5],
+    4: ["Flower Cup", "50cc", 40, "Flower Cup Perfection I", 5],
+    5: ["Flower Cup", "100cc", 40, "Flower Cup Perfection II", 10],
     6: ["Flower Cup", "150cc", 40, "[Void] Flower Cup Perfection III", 10],
     7: ["Flower Cup", "150cc Mirror", 40, "[Void] III noitcerefP puC rewoF", 10],
-    8: ["Star Cup", "50cc", 40, "Star Cup Perfection I", 3],
-    9: ["Star Cup", "100cc", 40, "Star Cup Perfection II", 5],
+    8: ["Star Cup", "50cc", 40, "Star Cup Perfection I", 5],
+    9: ["Star Cup", "100cc", 40, "Star Cup Perfection II", 10],
     10: ["Star Cup", "150cc", 40, "[Void] Star Cup Perfection III", 10],
     11: ["Star Cup", "150cc Mirror", 40, "[Void] III noitcerefP puC ratS", 10],
-    12: ["Special Cup", "50cc", 40, "Special Cup Perfection I", 3],
-    13: ["Special Cup", "100cc", 40, "Special Cup Perfection II", 5],
+    12: ["Special Cup", "50cc", 40, "Special Cup Perfection I", 5],
+    13: ["Special Cup", "100cc", 40, "Special Cup Perfection II", 10],
     14: ["Special Cup", "150cc", 40, "[Void] Special Cup Perfection III", 10],
     15: ["Special Cup", "150cc Mirror", 40, "[Void] III noitcerefP puC laicepS", 10],
-    16: ["All Cup Tour", "50cc", 160, "All Cup Tour Perfection I", 5],
-    17: ["All Cup Tour", "100cc", 160, "All Cup Tour Perfection II", 10],
+    16: ["All Cup Tour", "50cc", 160, "All Cup Tour Perfection I", 10],
+    17: ["All Cup Tour", "100cc", 160, "All Cup Tour Perfection II", 25],
     18: ["All Cup Tour", "150cc", 160, "[Void] All Cup Tour Perfection III", 10],
     19: ["All Cup Tour", "150cc Mirror", 160, "[Void] III noitcerefP ruoT puC llA", 25],
 }
@@ -829,16 +852,16 @@ time_trials = {
 
 // {0}: Character 1, {1}: Character 2, {2}: Speed, {3}: Kart, {4}: Cup, {5}: Grand Prix Points, {6}: Title, {7}: Points
 grand_prix_character_specific = {
-    0: ["Mario", "Luigi", "150cc", "Green Fire", "Mushroom Cup", 40, "Partners in Plumbing", 10],
-    1: ["Yoshi", "Birdo", "150cc", "Turbo Birdo", "Flower Cup", 40, "Partners in Dino", 10],
-    2: ["Toad", "Toadette", "150cc", "Toadette Kart", "Star Cup", 40, "Partners in Fungi", 10],
-    3: ["Donkey Kong", "Diddy Kong", "150cc", "DK Jumbo", "Special Cup", 40, "Partners in Country", 10],
-    4: ["Wario", "Waluigi", "150cc", "Wario Car", "All Cup Tour", 160, "Partners in Crime", 25],
-    5: ["Peach", "Daisy", "150cc Mirror", "Bloom Coach", "Mushroom Cup", 40, "Partners in Royalty", 10],
-    6: ["Baby Mario", "Baby Luigi", "150cc Mirror", "Rattle Buggy", "Flower Cup", 40, "Partners in Time", 10],
-    7: ["Koopatroopa", "Paratroopa", "150cc Mirror", "Para Wing", "Star Cup", 40, "Partners in Koopa", 10],
-    8: ["Bowser", "Bowser Jr", "150cc Mirror", "Koopa King", "Special Cup", 40, "Partners in Chaos", 10],
-    9: ["King Boo", "Petey", "150cc Mirror", "Boo Pipes", "All Cup Tour", 160, "Partners in Night and Shine", 25]
+    0: ["Mario", "Luigi", "150cc", "Green Fire", "Mushroom Cup", 40, "Partners in Plumbing", 25],
+    1: ["Yoshi", "Birdo", "150cc", "Turbo Birdo", "Flower Cup", 40, "Partners in Dino", 25],
+    2: ["Toad", "Toadette", "150cc", "Toadette Kart", "Star Cup", 40, "Partners in Fungi", 25],
+    3: ["Donkey Kong", "Diddy Kong", "150cc", "DK Jumbo", "Special Cup", 40, "Partners in Country", 25],
+    4: ["Wario", "Waluigi", "150cc", "Wario Car", "All Cup Tour", 160, "Partners in Crime", 50],
+    5: ["Peach", "Daisy", "150cc Mirror", "Bloom Coach", "Mushroom Cup", 40, "Partners in Royalty", 25],
+    6: ["Baby Mario", "Baby Luigi", "150cc Mirror", "Rattle Buggy", "Flower Cup", 40, "Partners in Time", 25],
+    7: ["Koopatroopa", "Paratroopa", "150cc Mirror", "Para Wing", "Star Cup", 40, "Partners in Koopa", 25],
+    8: ["Bowser", "Bowser Jr", "150cc Mirror", "Koopa King", "Special Cup", 40, "Partners in Chaos", 25],
+    9: ["King Boo", "Petey", "150cc Mirror", "Boo Pipes", "All Cup Tour", 160, "Partners in Night and Shine", 50]
 }
 
 
@@ -859,11 +882,11 @@ for unlock in save_file_unlocks {
 achievement ( 
     title="Double the Gold, Double the Dash",
     description="Unlock the " + "alternate opening screen" + " by getting a gold trophy on every Cup",
-    points=25,
+    points=50,
     type="win_condition",
     trigger=
     grand_prix_completion() &&
-    prev(bit5(save_file_unlockables_4())) == 0 && bit5(save_file_unlockables_4()) == 1
+    prev(bit6(save_file_unlockables_4())) == 0 && bit6(save_file_unlockables_4()) == 1
 )
 
 
@@ -897,7 +920,7 @@ for unlock in time_trials {
 
 achievement (
     title="The Winner is You!",
-    description="Recieve your prize code after completing a Time Trial",
+    description="Receive your prize code after completing a Time Trial",
     points=1,
     trigger=prize_code_time_trial() && prize_code_check()
 )
@@ -911,8 +934,8 @@ for unlock in grand_prix_character_specific {
         points=grand_prix_character_specific[unlock][7],
         trigger=
         grand_prix_completion() &&
-        grand_prix_first_character() == characters[grand_prix_character_specific[unlock][0]] &&
-        grand_prix_second_character() == characters[grand_prix_character_specific[unlock][1]] &&
+        (grand_prix_first_character() == characters[grand_prix_character_specific[unlock][0]] && grand_prix_second_character() == characters[grand_prix_character_specific[unlock][1]] ||
+        grand_prix_first_character() == characters[grand_prix_character_specific[unlock][1]] && grand_prix_second_character() == characters[grand_prix_character_specific[unlock][0]]) &&
         grand_prix_kart_id() == karts[grand_prix_character_specific[unlock][3]] &&
         cup() == cups[grand_prix_character_specific[unlock][4]] &&
         cc() == speed[grand_prix_character_specific[unlock][2]] &&
@@ -956,19 +979,19 @@ achievement (
 achievement (
     title="How Does This Help Me",
     description="In a Grand Prix race, use a Blue Shell in first place and await your punishment",
-    points=2,
+    points=5,
     trigger=
     game_state() == 0x03 && gamemode() == 0x02 && options_pointer() == 0x01 && race_completed_flag() == 0x00 &&
-    player_1_current_place() == 0x01 && prev(item_pointer()) > 0 && prev(current_item()) == items["Spiny Shell"] && item_pointer() == 0
+    player_1_current_place() == 0x01 && prev(item_pointer()) > 0 && prev(current_item()) == items["Spiny Shell"] && item_used()
 )
 
 
 // {0}: Title, {1}: Description, {2}: Code, {3}: Points
 misc_specific = {
     0: ["Kart Needs Some Repairs", "Get first in a grand prix race without Drifting", never(player_drift() >= 1), 2],
-    1: ["An Old-Fashioned Way of Karting", "Get first in a grand prix race without mini-turbos and using items", never(player_drift() >=2) && never(item_pointer() > 0) && never(player_1_character_1_has_item() != 0 || player_1_character_2_has_item() != 0), 2 ],
+    1: ["An Old-Fashioned Way of Karting", "Get first in a grand prix race without mini-turbos and obtaining items", never(player_drift() >=2) && never(final_race_time() > 0 && player_1_character_1_has_item() != 0 || player_1_character_2_has_item() != 0), 3],
     2: ["Welcome to the Driver's Test", "Get first in a grand prix race without hitting obstacles or enemy items", never(player_1_hit_animation_time() > 0), 2],
-    3: ["A Shocking Turn of Events", "Get first in a grand prix race after stunning everyone with the Lightning Bolt twice", measured(repeated(2,prev(item_pointer()) > 0 && prev(current_item()) == items["Lightning"] && item_pointer() == 0 && lightning_check())), 10],
+    3: ["A Shocking Turn of Events", "Get first in a grand prix race after stunning everyone with the Lightning Bolt twice", measured(repeated(2,prev(item_pointer()) > 0 && prev(current_item()) == items["Lightning"] && item_pointer() == 0 && lightning_check())), 25],
 }
 
 for unlock in misc_specific {
@@ -986,12 +1009,12 @@ for unlock in misc_specific {
 
 achievement (
     title="Specialty in Racing",
-    description="In a Grand Prix race use Special Items at least 5 times",
+    description="In a Grand Prix race use Special Items at least 5 times and complete the race.",
     points=5,
     trigger=
     once(race_start()) && 
     trigger_when(prev(race_completed_flag()) == 0x00 && race_completed_flag() == 0x01) &&
-    measured(repeated(5, prev(item_pointer()) > 0 && special_check() && item_pointer() == 0)) && 
+    measured(repeated(5, prev(item_pointer()) > 0 && special_check() && item_used())) && 
     never(race_reset())
 )
 
