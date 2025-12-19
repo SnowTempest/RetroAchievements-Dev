@@ -1,0 +1,303 @@
+Pointers -> ADDRESS & VALUE -> 0x1fffffff
+
+f78848 -> pause pointer?
+
+[32-Bit BE] Global Pointer
++0x00:
+++0x00:
++++0x80: [32-bit BE pointer] Global Manager
+++++0x00: [32-bit BE pointer] Global Manager Object
++++++0x00:
+++++++0x00:
++++++++0x00: [20 Byte] Global Manager String
+++++0x1C0: [12 Byte] Global Flag Name String
+++0x08: [32-bit BE pointer] Render Manager
++++0x00: [32-bit BE pointer] Render Manager Object
+++++0x00:
++++++0x00:
+++++++0x00: [20 Byte] Render Manager String
++++0x40: [32-bit BE] Screen Transition Time
++++0x44: [32-bit BE] Screen Transition Color RGBA
+        0x00000000 = Transparent
+        0xFF0000FF = Red
+        0x00FF00FF = Green
+        0x0000FFFF = Blue
+        0x000000FF = Black
+        0xFFFFFFFF = White
++0x08: [32-bit BE pointer] Controls Manager
+++0x02: [8-bit] Button Contols
+Bit 0 = 2
+Bit 1 = 1
+Bit 2 = B
+Bit 3 = A
+Bit 4 = Minus
+Bit 7 = Home
+++0x03: [8-bit] D-Pad Controls
+Bit 0 = Left
+Bit 1 = Right
+Bit 2 = Down
+Bit 3 = Up
+Bit 4 = Plus
+
+
+[32-bit BE]  Global Manager Pointer
++0x1e0: [32-bit BE] Save File Begins
+
+
+[32-bit BE] Attraction Lobby Pointer
++0x04:
+++0x94: [32-bit BE] Stage Data
+
+
+[32-bit BE] Attraction Lobby Script Pointer
++0x00:
+++0x00:
++++0x00:
++++++0x00: [32-Bytes] Property Name: nsDelhi::nsMenu::MenuScriptLobby
++0x18: [9-Bytes] Property Name: MenuObjId
++0x94: [11-Bytes] Property Name: MenuMesgRes
++0xb0: [13-Bytes] Property Name: MenuTextTexId
++0x338: [36-Bytes] Property Name: /Menu/ObjectLocatorMol/Lobby**.rlb
++0x4f4: [32-bit BE] Attraction Lobby Selected Pokemon
+
+
+
+[32-bit BE] In-Game Pointer
++0x1c = Area Id
++0x20 = Sub-Area Id
+
+
+
+[32-bit BE] Title Screen Pointer
+
+
+
+[32-bit BE] Photo Studio Pointer
+
+
+
+[32-bit BE] Attraction Object Locator Pointer
++0x00: [36-Bytes] Property Name: /Menu/ObjectLocatorMol/Lobby**.rlb
+
+
+[32-bit BE] Attraction Manager Pointer
++0x00:
+++0x04: [32-bit BE] Attraction Save Id
+++0x08: [32-bit BE] Attraction Save Pokemon Id
+++0x17: [8-bit] Attraction Status
+0x01 = Cutscene
+0x02 = Countdown
+0x03 = Start
+0x04 = Finish
+0x05 = Results
+0x06 = Transition
+0xff = Loading
+++0x1b: [8-bit] Previous Attraction Status
+++0x34: [32-bit BE] Attraction Status Time Elapsed Seconds
+++0x78: [32-bit BE] Pokemon Index 0 Id
+++0x80: [32-bit BE] Pokemon Index 0 Finished Attraction
+++0x84: [32-bit BE] Pokemon Index 0 Attraction Time
+- Gyarados's Aqua Dash: Time [FRAMES]
+- Empoleon's Snow Slide: Time [FRAMES]
+++0x8c: [32-bit BE] Pokemon Index 1 Id
+++0x94: [32-bit BE] Pokemon Index 1 Finished Attraction
+++0x98: [32-bit BE] Pokemon Index 1 Attraction Time
+++0xa0: [32-bit BE] Pokemon Index 2 Id
+++0xa8: [32-bit BE] Pokemon Index 2 Finished Attraction
+++0xac: [32-bit BE] Pokemon Index 2 Attraction Time
+++0xb4: [32-bit BE] Pokemon Index 3 Id
+++0xbc: [32-bit BE] Pokemon Index 3 Finished Attraction
+++0xc0: [32-bit BE] Pokemon Index 3 Attraction Time
+- Bulbasaur's Daring Dash: Time [FIXED2]
+- Dusknoir's Speed Slam: Time [FIXED2]
+- Absol's Hurdle Bounce: Time [FIXED2]
+++0xc8: [32-bit BE] Pokemon Index 4 Id
+++0xd0: [32-bit BE] Pokemon Index 4 Finished Attraction
+++0xd4: [32-bit BE] Pokemon Index 4 Attraction Time
+++0xdc: [32-bit BE] Pokemon Index 5 Id
+++0xe4: [32-bit BE] Pokemon Index 5 Finished Attraction
+++0xe8: [32-bit BE] Pokemon Index 5 Attraction Time
+- Tangrowth's Swing Along: Time [FRAMES]
+++0xf0: [32-bit BE] Pokemon Index 6 Id
+++0xf8: [32-bit BE] Pokemon Index 6 Finished Attraction
+++0xfc: [32-bit BE] Pokemon Index 6 Attraction Time
+++0x104: [32-bit BE] Pokemon Index 7 Id
+++0x10c: [32-bit BE] Pokemon Index 7 Finished Attraction
+++0x110: [32-bit BE] Pokemon Index 7 Attraction Time
+++0x118: [32-bit BE] Pokemon Index 0 Id
+++0x11c: [32-bit BE] Pokemon Attraction Distance Entries
+++0x120: [Float BE] Pokemon Index 0 Attraction Distance
+- Venusaur's Vine Swing: Distance [FLOAT BE]
+++0x128: [32-bit BE] Pokemon Index 1 Id
+++0x130: [Float BE] Pokemon Index 1 Attraction Distance
+++0x138: [32-bit BE] Pokemon Index 2 Id
+++0x140: [Float BE] Pokemon Index 2 Attraction Distance
+++0x148: [32-bit BE] Pokemon Index 3 Id
+++0x150: [Float BE] Pokemon Index 3 Attraction Distance
+++0x158: [32-bit BE] Pokemon Index 4 Id
+++0x160: [Float BE] Pokemon Index 4 Attraction Distance
+++0x168: [32-bit BE] Pokemon Index 5 Id
+++0x170: [Float BE] Pokemon Index 5 Attraction Distance
+++0x178: [32-bit BE] Pokemon Index 6 Id
+++0x180: [Float BE] Pokemon Index 6 Attraction Distance
+++0x188: [32-bit BE] Pokemon Index 7 Id
+++0x190: [Float BE] Pokemon Index 7 Attraction Distance
+++0x194: [Float BE] Pokemon Attraction Score Entries
+++0x198: [32-bit BE] Pokemon Index 0 Id
+++0x1a0: [32-bit BE] Pokemon Index 0 Score
+- Pelipper's Circle Circuit: Score [FIXED2]
+- Bastiodon's Block Barrage: Score [FIXED2]
+- Rhyperior's Bumper Burn: Score [FIXED2]
+- Blaziken's Boulder Bash: Score [FIXED2]
+- Rotom's Spooky Shoot-'em-up: Score [FIXED2]
+- Salamence's Air Ace Attraction: Score [FIXED2]
+- Rayquaza's Balloon Panic: Score [FIXED2]
+++0x1a8: [32-bit BE] Pokemon Index 1 Id
+++0x1b0: [32-bit BE] Pokemon Index 1 Score
+++0x1b8: [32-bit BE] Pokemon Index 2 Id
+++0x1c0: [32-bit BE] Pokemon Index 2 Score
+++0x1c8: [32-bit BE] Pokemon Index 3 Id
+++0x1d0: [32-bit BE] Pokemon Index 3 Score
+++0x1d8: [32-bit BE] Pokemon Index 4 Id
+++0x1e0: [32-bit BE] Pokemon Index 4 Score
+++0x1e8: [32-bit BE] Pokemon Index 5 Id
+++0x1f0: [32-bit BE] Pokemon Index 5 Score
+++0x1f8: [32-bit BE] Pokemon Index 6 Id
+++0x200: [32-bit BE] Pokemon Index 6 Score
+++0x208: [32-bit BE] Pokemon Index 7 Id
+++0x210: [32-bit BE] Pokemon Index 7 Score
+++0x214: [8-bit] Pokemon Index 0 Active
+++0x215: [8-bit] Pokemon Index 1 Active
+++0x216: [8-bit] Pokemon Index 2 Active
+++0x217: [8-bit] Pokemon Index 3 Active
+++0x218: [8-bit] Pokemon Index 4 Active
+++0x219: [8-bit] Pokemon Index 5 Active
+++0x21a: [8-bit] Pokemon Index 6 Active
+++0x21b: [8-bit] Pokemon Index 7 Active
+++0x21c: [8-bit] Pokemon Index 0 Finished
+++0x21d: [8-bit] Pokemon Index 1 Finished
+++0x21e: [8-bit] Pokemon Index 2 Finished
+++0x21f: [8-bit] Pokemon Index 3 Finished
+++0x220: [8-bit] Pokemon Index 4 Finished
+++0x221: [8-bit] Pokemon Index 5 Finished
+++0x222: [8-bit] Pokemon Index 6 Finished
+++0x223: [8-bit] Pokemon Index 7 Finished
+++0x224: [32-bit BE] Player Pokemon Index
+++0x228: [32-bit BE] Player Pokemon Id
+++0x234: [16-bit BE] Attraction Countdown Timer
+0x00=Countdown Reset
+0x3c=1
+0x13c=2
+0x23c=3
++0x29: [8-bit] Attraction Paused
+0x00 = No
+0x01 = Yes
++0x30: [32-bit BE] Attraction Id
++0x34: [32-bit BE] Attraction Pokemon Id
+
+
+[32-bit BE] Object Manager Pointer
++0x00: 
+++0x00:
++++0x00:
+++++0x00: [32-Bytes] Property Name: nsDelhi:nsObject:ObjectManager
++0x10:
+++0x00:
++++0x00:
+++++0x00: [36-Bytes] Property Name: nsDelhi::nsObject::ObjectFinderSearch
+
+[32-bit BE] Player Object Pointer Linked List
++0x00: 
+++0x00:
++++0x00:
+++++0x00: [24-Bytes] Property Name: nsDelhi::nsObject::Player
++0x19c: Node0
+
+[32-bit BE] Player Object Pointer
++0x00: 
+++0x00:
++++0x00:
+++++0x00: [24-Bytes] Property Name: nsDelhi::nsObject::Player
++0x24
+++0x00:
++++0x00:
+++++0x00: [36-Bytes] Property Name: nsDelhi::nsObject::ModuleAccessorPlayer
++0x444: [32-bit BE] Pikachu Movement Animation
+0x00 = Stand Still
+0x01 = Dashing / Asleep
+0x02 = Walking
++0x488: [32-bit BE] Pikachu Idle Time
+0x1c1f = Asleep
++0x4d4: [32-bit BE] Current Animation Timer
++0x504: [32-bit BE] Probable Linked List Pointer
+++0x00:
++++0x0c: 
+++++0x00:
++++++0x1c:
+++++++0x2c:
++++++++0x00:
+++++++++0x1c:
++++++++++0x00:
+++++++++++0x10:
++++++++++++0x14:
+++++++++++++0x04:
++++++++++++++0x20:
+++++++++++++++0x00: [32-bit BE] Pikachu Held Item Animation
+0x28 = Bouqet
+0x50 = Iron Ore
+0x51 = Gold Ore
+0x52 = Iron Top / Big Berry (Icezone)
+0x53 = Iron Bar
+0x54 = Big Berry (Meadow Zone)
+0x55 = Bottle
+0x56 = Bottle
+0x57 = Bottle
+0xffffffff = Pikachu has not grabbed anything yet in this session.
++++++++++++++0x2c: [32-bit BE] Pikachu Has Held Item
+0x00 = No
+0x01 = Yes
+
+
+[32-bit BE] Index to Area Name Pointer
+Index + 1 = Player Object Pointer
+
+
+[Skill Games]
+Athletic - Obstacle Hop
+Challenge
+HideSeek
+Battle
+Chase
+
+GOALS ->
+SKILL GAMES -> SKIP FOR NOW
+
+
+SCREEN CHECKS
+FIX PAUSE POINTER
+SAVE PROTECTION
+FIND MISC ITEMS LIKE VASES / BOTTLES / GOLDEN BERRIES
+MAKE THE SET
+
+IF DESIRED:
+SKILL GAMES -> SKIP FOR NOW
+
+
+[32-bit BE] Save File Pointer
+
+
+
+mnMenu
+-> menuScriptStartMenu
+
+mnLobby
+-> menuScriptLobby
+
+mnPhoto
+
+mnStart
+
+mnStrap
+
+mnHold
+

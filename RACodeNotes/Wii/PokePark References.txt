@@ -1,0 +1,469 @@
+-----------------------------
+
+[8-bit] Pikachu Completed Attractions 1
+Bit 0 = Empoleon's Snow Slide 
+Bit 1 = Bastiodon's Block Barrage 
+Bit 2 = Rhyperior's Bumper Burn 
+Bit 3 = Blaziken's Boulder Bash 
+Bit 4 = Rotom's Spooky Shoot-'em-up
+Bit 6 = Salamence's Air Ace Attraction
+Bit 7 = Bulbasaur's Daring Dash 
+
+[8-bit] Pikachu Completed Attractions 2
+Bit 0 = Absol's Hurdle Bounce
+Bit 1 = Rayquaza's Balloon Panic 
+Bit 2 = Venusaur's Vine Swing 
+Bit 3 = Tangrowth's Swing Along 
+Bit 4 = Dusknoir's Speed Slam 
+Bit 5 = Gyarados's Aqua Dash 
+Bit 6 = Pelipper's Circle Circuit 
+
+----------------------------
+
+[8-bit] Pikachu Friend Status
+[8-bit] Pikachu Completed Attractions 1
+[8-bit] Pikachu Completed Attractions 2
+[8-bit] Pikachu Playable Attractions 1
+[8-bit] Pikachu Playable Attractions 2
+[8-bit] Pikachu Best Friend Status
+[16-bit BE] Pikachu Friend Date Year
+[8-bit] Pikachu Friend Date Month
+[8-bit] Pikachu Friend Date Day
+
+----------------------------
+
+[32-bit BE] BDD Buneary Record
+[8-bit] BDD Pachirisu Bonus
+[32-bit BE] Bulbasaur's Daring Dash Arcade Unlocked (BDDA)
+[32-bit BE] BDDA Pikachu Record
+
+----------------------------
+
+[32-bit BE] Venusaur's Vine Swing (VVS)
+[16-bit BE] Venusaur's Vine Swing Completion Times
+[32-bit BE] VVS Leafeon Record
+[8-bit] VVS Munchlax Bonus
+[32-bit BE] Venusaur's Vine Swing Arcade Unlocked (VSSA)
+[32-bit BE] VSSA Pikachu Record
+
+------------------------------
+
+[32-bit BE] Pelipper's Circle Circuit Arcade Unlocked (PCCA)
+[32-bit BE] PCCA Pikachu Record
+[32-bit BE] PCC Wingull Record
+[8-bit] PCC Wingull Bonus
+
+------------------------------
+
+[32-bit BE] Gyarados's Aqua Dash Arcade Unlocked (GADA)
+[32-bit BE] GADA Pikachu Record
+[32-bit BE] GAD Lotad Record
+[8-bit] GAD Lotad Bonus
+
+------------------------------
+
+[32-bit BE] Empoleon's Snow Slide Arcade Unlocked (ESSA)
+[32-bit BE] ESSA Pikachu Record
+[32-bit BE] ESS Spheal Record
+[8-bit] ESS Spheal Bonus
+
+-------------------------------
+
+[32-bit BE] Bastiodon's Block Barrage Attraction Status (BBB)
+[16-bit BE] Bastiodon's Block Barrage Completion Times
+[32-bit BE] Bastiodon's Block Barrage Arcade Unlocked (BBBA)
+[32-bit BE] BBBA Pikachu Record
+[32-bit BE] BBB Spheal Record
+[8-bit] BBB Spheal Bonus
+
+---------------------------
+
+[32-bit BE] Rhyperior's Bumper Burn Arcade Unlocked (RBBA)
+[32-bit BE] RBBA Pikachu Record
+[32-bit BE] Rhyperior's Bumper Burn Attraction Status (RBB)
+[16-bit BE] Rhyperior's Bumper Burn Completion Times
+[32-bit BE] RBB Spheal Record
+[8-bit] RBB Spheal Bonus
+
+---------------------------------
+
+[32-bit BE] Blaziken's Boulder Bash Arcade Unlocked (BLBBA)
+[32-bit BE] BLBBA Pikachu Record
+[32-bit BE] Blaziken's Boulder Bash Attraction Status (BLBB)
+[16-bit BE] Blaziken's Boulder Bash Completion Times
+[32-bit BE] BLBB Spheal Record
+[8-bit] BLBB Spheal Bonus
+
+-------------------------------
+
+[32-bit BE] Tangrowth's Swing-Along Arcade Unlocked (TSAA)
+[32-bit BE] TSAA Pikachu Record
+[32-bit BE] Tangrowth's Swing-Along Attraction Status (TSA)
+[16-bit BE] Tangrowth's Swing-Along Completion Times
+[32-bit BE] TSA Spheal Record
+[8-bit] TSA Spheal Bonus
+
+-------------------------------
+
+[32-bit BE] Dusknoir's Speed Slam Arcade Unlocked (DSSA)
+[32-bit BE] DSSA Pikachu Record
+[32-bit BE] Dusknoir's Speed Slam Attraction Status (DSS)
+[16-bit BE] Dusknoir's Speed Slam Completion Times
+[32-bit BE] DSS Spheal Record
+[8-bit] DSS Spheal Bonus
+
+-------------------------------
+
+[32-bit BE] Rotom's Spooky Shoot-'em-up Arcade Unlocked (RSSA)
+[32-bit BE] RSSA Pikachu Record
+[32-bit BE] Rotom's Spooky Shoot-'em-up Attraction Status (RSS)
+[16-bit BE] Rotom's Spooky Shoot-'em-up Completion Times
+[32-bit BE] RSS Spheal Record
+[8-bit] RSS Spheal Bonus
+
+-------------------------------
+
+[32-bit BE] Absol's Hurdle Bounce Arcade Unlocked (AHBA)
+[32-bit BE] AHBA Pikachu Record
+[32-bit BE] Absol's Hurdle Bounce Attraction Status (AHB)
+[16-bit BE] Absol's Hurdle Bounce Completion Times
+[32-bit BE] AHB Spheal Record
+[8-bit] AHB Spheal Bonus
+
+-------------------------------
+
+[32-bit BE] Salamence's Air Ace Arcade Unlocked (SAAA)
+[32-bit BE] SAAA Pikachu Record
+[32-bit BE] Salamence's Air Ace Attraction Status (SAA)
+[16-bit BE] Salamence's Air Ace Completion Times
+[32-bit BE] SAA Spheal Record
+[8-bit] SAA Spheal Bonus
+
+-------------------------------
+
+[32-bit BE] Rayquaza's Balloon Panic Arcade Unlocked (RBPA)
+[32-bit BE] RBPA Pikachu Record
+[32-bit BE] Rayquaza's Balloon Panic Attraction Status (RBP)
+[16-bit BE] Rayquaza's Balloon Panic Completion Times
+[32-bit BE] RBP Spheal Record
+[8-bit] RBP Spheal Bonus
+
+------------------------------
+
+[8-bit] Area ID
+0x01 = Meadow Zone
+0x02 = Meeting Place
+0x03 = Beach Zone / Iceberg Zone
+0x04 = Cavern Zone / Lava Zone
+0x05 = Haunted Zone
+0x06 = Granite Zone / Flower Zone
+0x07 = Sky Pavilion
+0x63 = PokePark Entrance
+
+
+[8-bit] Sub-Area ID
+- - [Meadow Zone]
+- - - - | 0x01 = Meadow Zone
+- - - - | 0x02 = Venusaur's Area
+- - [Meeting Place]
+- - - - | 0x01 = Meeting Place
+- - [Beach Zone]
+- - - - | 0x01 = Beach Zone
+- - - - | 0x02 = Iceberg Zone
+- - - - | 0x03 = Empoleon's Area
+- - [Cavern Zone]
+- - - - | 0x01 = Cavern Zone
+- - - - | 0x02 = Lava Zone
+- - - - | 0x03 = Blaziken's Area
+- - [Haunted Zone]
+- - - - | 0x01 = Haunted Zone
+- - - - | 0x02 = Mansion Area
+- - - - | 0x03 = Rotom's Area
+- - [Granite Zone]
+- - - - | 0x01 = Granite Zone
+- - - - | 0x02 = Flower Zone
+- - [Sky Pavilion]
+- - - - | 0x01 = Sky Pavilion
+- - [PokePark Entrance]
+- - - - | 0x01 = PokePark Entrance
+
+
+[8-bit] Spawn Point ID
+- - [Meadow Zone]
+- - - - | 0x00 = PokePark Entrance 
+- - - - | 0x01 = Meeting Place Entrance
+- - - - | 0x02 = Venusaur's Area Entrance
+- - - - | 0x03 = Drifblim
+- - [Venusaur's Area]
+- - - - | 0x00 = Back to Meadow Zone
+- - [Meeting Place]
+- - - - | 0x00 = Meadow Zone Entrance
+- - - - | 0x01 = Beach Zone Entrance
+- - - - | 0x02 = Canvern Zone Entrance
+- - - - | 0x03 = Haunted Zone Entrance
+- - - - | 0x04 = Granite Zone Entrance
+- - - - | 0x05 = Drifblim
+- - - - | 0x06 = Sky Pavilion Entrance
+- - [Beach Zone]
+- - - - | 0x00 = Meeting Place Entrance
+- - - - | 0x01 = Iceberg Zone Entrance
+- - - - | 0x02 = Drifblim
+- - [Iceberg Zone]
+- - - - | 0x00 = Beach Zone Entrance
+- - - - | 0x01 = Empoleon's Area Entrnace
+- - - - | 0x02 = Drifblim
+- - [Empoleon's Area]
+- - - - | 0x00 = Back to Iceberg Zone
+- - [Cavern Zone]
+- - - - | 0x00 = Meeting Place Entrance
+- - - - | 0x01 = Lava Zone Entrance
+- - - - | 0x02 = Drifblim
+- - [Lava Zone]
+- - - - | 0x00 = Cavern Zone Entrance
+- - - - | 0x01 = Blaziken's Area Entrance
+- - - - | 0x02 = Drifblim
+- - [Blaziken's Area]
+- - - - | 0x00 = Back to Lava Zone
+- - [Haunted Zone]
+- - - - | 0x00 = Meeting Place Entrance
+- - - - | 0x01 = Mansion Area Entrance
+- - - - | 0x02 = Drifblim
+- - [Mansion Area]
+- - - - | 0x00 = Haunted Zone Entrance
+- - - - | 0x01 = Rotom's Area
+- - [Rotom's Area]
+- - - - | 0x00 = Back to Mansion Area
+- - [Granite Zone]
+- - - - | 0x00 = Meeting Place Entrance
+- - - - | 0x01 = Flower Zone Entrance
+- - - - | 0x02 = Drifblim
+- - [Flower Zone]
+- - - - | 0x00 = Granite Zone Entrance
+- - - - | 0x01 = Drifblim
+- - [Sky Pavilion]
+- - - - | 0x00 = Meeting Place Entrance
+- - [PokePark Entrance]
+- - - - | 0x00 = Prologue
+- - - - | 0x01 = Meadow Zone Entrance
+
+
+[Attractions]
+0x00 = Absol's Hurdle Bounce
+0x01 = Rayquaza's Balloon Panic
+0x02 = Venusaur's Vine Swing
+0x03 = Tangrowth's Swing Along
+0x04 = Dusknoir's Speed Slam
+0x05 = Gyarados's Aqua Dash
+0x06 = Pelipper's Circle Circuit
+0x08 = Empoleon's Snow Slide
+0x09 = Bastiodon's Block Barrage
+0x0a = Rhyperior's Bumper Burn
+0x0b = Blaziken's Boulder Bash
+0x0c = Rotom's Spooky Shoot-'em-up
+0x0e = Salamence's Air Ace Attraction
+0x0f = Bulbasaur's Daring Dash
+
+
+[Pokemon]
+0x00 = Pikachu
+0x01 = Mime Jr.
+0x02 = Electabuzz
+0x03 = Lucario
+0x04 = Chatot
+0x05 = Mew
+0x06 = Piplup
+0x07 = Chimchar
+0x08 = Turtwig
+0x09 = Buneary
+0x0a = Pachirisu
+0x0b = Croagunk
+0x0c = Staravia
+0x0d = Buizel
+0x0e = Ambipom
+0x0f = Aipom
+0x10 = Bonsly
+0x11 = Riolu
+0x12 = Bidoof
+0x13 = Munchlax
+0x14 = Pichu
+0x15 = Magby
+0x16 = Smoochum
+0x17 = Elekid
+0x18 = Magnemite
+0x19 = Lotad
+0x1a = Duskull
+0x1b = Skorupi
+0x1c = Gible
+0x1d = Wynaut
+0x1e = Stunky
+0x1f = Aron
+0x20 = Meditite
+0x21 = Mankey
+0x22 = Oddish
+0x23 = Corphish
+0x24 = Murkrow
+0x25 = Phanpy
+0x26 = Shroomish
+0x27 = Caterpie
+0x28 = Weedle
+0x29 = Tropius
+0x2a = Blastoise
+0x2b = Magikarp
+0x2c = Squirtle
+0x2d = Torterra
+0x2e = Starly
+0x2f = Bibarel
+0x30 = Feraligatr
+0x31 = Kakuna
+0x32 = Staraptor
+0x33 = Golduck
+0x34 = Diglett
+0x35 = Gyarados
+0x36 = Shaymin
+0x37 = Shaymin Sky-Form
+0x38 = Treecko
+0x39 = Bulbasaur
+0x3a = Charizard
+0x3b = Empoleon
+0x3c = Gengar
+0x3d = Mareep
+0x3e = Misdreavus
+0x3f = Torchic
+0x40 = Bellossom
+0x41 = Skiploom
+0x42 = Azurill
+0x43 = Skuntank
+0x44 = Haunter
+0x45 = Scyther
+0x46 = Absol
+0x47 = Scizor
+0x48 = Quilava
+0x49 = Eevee
+0x4a = Flareon
+0x4b = Vaporeon
+0x4c = Glaceon
+0x4d = Jolteon
+0x4e = Espeon
+0x4f = Umbreon
+0x50 = Leafeon
+0x51 = Froslass
+0x52 = Ninetales
+0x53 = Mawile
+0x54 = Primeape
+0x55 = Farfetch'd
+0x56 = Piloswine
+0x57 = Torkoal
+0x58 = Magcargo
+0x59 = Wingull
+0x5a = Pelipper
+0x5b = Krabby
+0x5c = Zubat
+0x5d = Geodude
+0x5e = Abra
+0x5f = Voltorb
+0x60 = Electrode
+0x61 = Drifloon
+0x62 = Drifblim
+0x63 = Rayquaza
+0x64 = Dugtrio
+0x65 = Breloom
+0x66 = Infernape
+0x67 = Lopunny
+0x68 = Venusaur
+0x69 = Quagsire
+0x6a = Blaziken
+0x6b = Sudowoodo
+0x6c = Spheal
+0x6d = Prinplup
+0x6e = Cranidos
+0x6f = Camerupt
+0x70 = Marowak
+0x71 = Machamp
+0x72 = Budew
+0x73 = Spinarak
+0x74 = Golem
+0x75 = Rhyperior
+0x76 = Magmortar
+0x77 = Arcanine
+0x79 = Sableye
+0x7a = Kirlia
+0x7b = Metapod
+0x7c = Burmy
+0x7d = Meowth
+0x7e = Floatzel
+0x7f = Carvanha
+0x80 = Sharpedo
+0x81 = Sneasel
+0x82 = Glalie
+0x83 = Mamoswine
+0x84 = Mr. Mime
+0x85 = Bastiodon
+0x86 = Ursaring
+0x87 = Vulpix
+0x88 = Rotom
+0x89 = Rotom-Wash
+0x8a = Rotom-Mower
+0x8b = Rotom-Fan
+0x8c = Rotom-Oven
+0x8d = Rotom-Fridge
+0x8e = Butterfree
+0x8f = Spearow
+0x90 = Pidgeotto
+0x91 = Hoppip
+0x92 = Jumpluff
+0x93 = Gliscor
+0x94 = Togekiss
+0x95 = Golbat
+0x96 = Honchkrow
+0x97 = Magnezone
+0x98 = Dragonite
+0x99 = Snorlax
+0x9a = Garchomp
+0x9b = Aerodactyl
+0x9c = Flygon
+0x9d = Salamence
+0x9e = Lapras
+0x9f = Furret
+0xa0 = Gastly
+0xa1 = Slowpoke
+0xa2 = Teddiursa
+0xa3 = Baltoy
+0xa4 = Claydol
+0xa5 = Bronzor
+0xa6 = Mismagius
+0xa7 = Raichu
+0xa8 = Luxray
+0xa9 = Tyranitar
+0xaa = Hitmonlee
+0xab = Hitmonchan
+0xac = Psyduck
+0xad = Taillow
+0xae = Shinx
+0xaf = Hitmontop
+0xb0 = Ponyta
+0xb1 = Metagross
+0xb2 = Electavire
+0xb3 = Mudkip
+0xb4 = Totodile
+0xb5 = Charmander
+0xb6 = Chikorita
+0xb7 = Cyndaquil
+0xb8 = Corsola
+0xb9 = Tangrowth
+0xba = Dusknoir
+0xbb = Celebi
+0xbc = Latias
+0xbd = Latios
+0xbe = Kyogre
+0xbf = Groudon
+0xc0 = Jirachi
+0xc1 = Heatran
+0xc2 = Manaphy
+0xc3 = Darkrai
+0xc4 = Suicune
+0xc5 = Deoxys
+0xc6 = Delibird
+0xc7 = Octillery
+0xc8 = Porygon-Z
+
+

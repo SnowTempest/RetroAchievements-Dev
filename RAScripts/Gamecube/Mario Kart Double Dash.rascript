@@ -60,39 +60,6 @@ function track_id() => dword_be(0x3CB6A8)
 // $3CB7AC: [32-bit BE] Current Track Preview
 function current_track_preview() => dword_be(0x3CB7AC)
 
-
-// $3C9CE0: [32-bit BE] Screen ID
-//          0x00 = Title Screen / Intro Movie
-//          0x01 = Player / Mode / Character Select
-//          0x02 = Options
-//          0x03 = Cup Select
-//          0x04 = Stage Select
-//          0x05 = Records
-//          0x06 = Next Course Transition
-//          0x07 = Saving
-//          0x09 = New Unlock
-//          0x0b = In-Game /  Alt Intro Movie
-function screen_id() => dword_be(0x3C9CE0)
-
-function global_screen_pointer() => dword_be(0x10A30AC)
-
-// $10A30B8: [32-bit BE] Options Pointer
-//           [In-Game] Race Status
-//           0x00 = Race Finished
-//           0x01 = Race OnGoing
-//           0x02 = Replay
-function options_pointer() => dword_be(0x10A30B8)
-
-// $10A30CC: [32-bit BE] Saving Pointer
-//           [In-Game] Race Information
-//           +0x00 = [8-bit] Race Character 1
-//           +0x01 = [8-bit] Race Character 2
-//           +0x02 = [8-bit] Race Kart
-//           +0x03 = [8-bit] Race Track ID
-//           +0x04 = [32-bit BE] Race Name
-//           +0x08 = [32-bit BE] Race Total Time
-function saving_pointer() => dword_be(0x10A30CC)
-
 // $3CC0A8: [32-bit BE] Race Pointer
 //          +0xA0 = [32-bit BE] Real Lap
 //          +0xf0 = [32-bit BE] Real Time in Frames
@@ -105,7 +72,7 @@ function race_pointer() => dword_be(0x3CC0A8)
 // $10A30F0: [8-bit] Race Completed Flag
 //           0x00 = No
 //           0x01 = Yes
-function race_completed_flag() => byte(0x10A30F0)
+//function race_completed_flag() => byte(0x10A30F0)
 
 // $3B1480: [32-bit BE] Current Race
 function current_race() => dword_be(0x3B1480)
@@ -287,7 +254,7 @@ function player_8_stun_animation_time() => dword_be(0x37FFDC)
 //           0x0b = Progressive Scan Mode has been turned on.
 //           0x0c = Progressive Scan Mode has been turned off.
 //           0x0d = Intro Movies Complete
-function intro_movies() => dword_be(0x109E854)
+function intro_movies() => dword_be((dword_be(0x3cbd68) & 0x17ffffff) + 0x14)
 
 // $3BC310: [8-bit] Save File Record Time Trial Baby Park 1st Place Character 1
 function save_file_record_time_trial_baby_park_1st_place_character_1() => byte(0x3BC310)
@@ -482,14 +449,88 @@ function save_file_record_time_trial_sherbet_land_1st_place_kart() => byte(0x3BC
 function save_file_record_time_trial_sherbet_land_1st_place_time() => dword_be(0x3BC69C)
 
 
+// $3C9CE0: [32-bit BE] Screen ID
+//          0x00 = Title Screen / Intro Movie
+//          0x01 = Player / Mode / Character Select
+//          0x02 = Options
+//          0x03 = Cup Select
+//          0x04 = Stage Select
+//          0x05 = Records
+//          0x06 = Next Course Transition
+//          0x07 = Saving
+//          0x09 = New Unlock
+//          0x0b = In-Game /  Alt Intro Movie
+function screen_id() => dword_be(0x3C9CE0)
+
+function in_game_global_screen_pointer() => dword_be(0x3cbd20)
+function menu_global_screen_pointer() => dword_be(0x3cbe20)
+function awards_global_screen_pointer() => dword(0x3cbe70)
+
+class GlobalManager {
+
+
+
+    RA_MASK = 0x17ffffff
+    IN_GAME_GLOBAL = dword_be(0x3cbd20)
+    MENU_GLOBAL = dword_be(0x3cbe20)
+    AWARDS_GLOBAL = dword_be(0x3cbe70)
+    GLOBAL_SCREEN_POINTER = 0xc
+    OPTION_POINTER = 0x18
+    SAVING_POINTER = 0x2c
+
+    function GetInGameGlobal() {
+        return this.IN_GAME_GLOBAL & this.RA_MASK
+    }
+
+    function GetInGameOptions() {
+        return ((this.GetInGameGlobal()) + this.OPTION_POINTER)
+    }
+
+    function GetMenuGlobal() {
+        return this.MENU_GLOBAL & this.RA_MASK
+    }
+
+    function GetMenuScreenPointer() {
+        return ((this.GetMenuGlobal()) + this.GLOBAL_SCREEN_POINTER)
+    }
+
+    function GetInGameSaving() {
+        return ((this.GetInGameGlobal()) + this.SAVING_POINTER)
+    }
+
+}
+
+globalManager = GlobalManager()
+function options_pointer() => dword_be(globalManager.GetInGameOptions())
+
+
+// $10A30B8: [32-bit BE] Options Pointer
+//           [In-Game] Race Status
+//           0x00 = Race Finished
+//           0x01 = Race OnGoing
+//           0x02 = Replay
+//function options_pointer() => dword_be(0x10A30B8)
+
+// $10A30CC: [32-bit BE] Saving Pointer
+//           [In-Game] Race Information
+//           +0x00 = [8-bit] Race Character 1
+//           +0x01 = [8-bit] Race Character 2
+//           +0x02 = [8-bit] Race Kart
+//           +0x03 = [8-bit] Race Track ID
+//           +0x04 = [32-bit BE] Race Name
+//           +0x08 = [32-bit BE] Race Total Time
+// function saving_pointer() => dword_be(0x10A30CC)
+
+
 function end_race_menu() => byte(0x3cb6d0)
 
 prize_code_offset = 0x1c270
 function prize_code_unlocked() => byte((prize_code_pointer_time_trial_results() & 0x17ffffff) + prize_code_offset)
 function prize_code_check() => prev(prize_code_unlocked()) == 0x00 && prize_code_unlocked() == 0x01
-function prize_code_time_trial() => game_state() == 0x03 && gamemode() == 0x01 && options_pointer() == 0x00 && race_completed_flag() == 0x01 && end_race_menu() == 0x01
+function prize_code_time_trial() => game_state() == 0x03 && gamemode() == 0x01 &&  options_pointer() == 0x00 && race_completed_flag() == 0x01 && end_race_menu() == 0x01
 
 function grand_prix_completion() => prev(gamemode()) == 0x02 && gamemode() == 0x08
+function grand_prix_save_file() => (gamemode() == 0x02 || gamemode() == 0x08)
 function grand_prix_start() => game_state() == 0x03 && gamemode() == 0x02 && options_pointer() == 0x01 && race_completed_flag() == 0x00 && final_race_time() == 0x00 && current_race() == 0x00
 function grand_prix_time() => dword_be(0x3B125C)
 
@@ -501,6 +542,7 @@ function time_trial_start() => game_state() == 0x03 && gamemode() == 0x01 && opt
 function time_trial_reset() => game_state() != 0x03 || options_pointer() == 0x02
 function time_trial_check() => game_state() == 0x03 && gamemode() == 0x01 && options_pointer() == 0x01 && race_completed_flag() == 0x01 && end_race_menu() == 0x01
 
+race_goal_reached_offset = 0x9d
 current_race_time_frames_offset = 0xf0
 final_time_offset = 0xf8
 final_time_offset_frames = 0xf4
@@ -508,6 +550,7 @@ final_time_offset_frames = 0xf4
 function final_race_time() => dword_be((race_pointer() & 0x17ffffff) + final_time_offset)
 function final_race_time_frames() => dword_be((race_pointer() & 0x17ffffff) + final_time_offset_frames)
 function current_race_time() => dword_be((race_pointer() & 0x17ffffff) + current_race_time_frames_offset)
+function race_completed_flag() => byte((race_pointer() & 0x17ffffff) + race_goal_reached_offset)
 
 
 function race_data_pointer() => dword_be(0x3cc118)
@@ -532,7 +575,7 @@ function lightning_check() => player_2_stun_animation_time() > 0 && player_3_stu
 function special_check() => prev(current_item()) == 0x01 || prev(current_item()) == 0x04 || prev(current_item()) == 0x07 || prev(current_item()) == 0x08 || prev(current_item()) == 0x0b || prev(current_item()) == 0x0c || prev(current_item()) == 0x0e || prev(current_item()) == 0x11 || prev(current_item()) == 0x13 || prev(current_item()) == 0x15 || prev(current_item()) == 0x1b
 
 
-function global_screen() => (global_screen_pointer() & 0x17ffffff)
+function global_screen() => (dword_be(globalManager.GetMenuScreenPointer()) & 0x17ffffff)
 
 function title_screen_start() => dword_be(global_screen() + 0x15c)
 function title_screen_option() => byte(global_screen() + 0x168)
@@ -565,12 +608,13 @@ function start_kart() => dword_be(global_screen() + 0x2140)
 // $3CB7A8: [32-bit BE] Current Cup
 function select_cup_current_cup() => dword_be(0x3CB7A8)
 
-function time_trial_character_1() => byte((saving_pointer() & 0x17ffffff))
-function time_trial_character_2() => byte((saving_pointer() & 0x17ffffff) + 0x1)
-function time_trial_kart() => byte((saving_pointer() & 0x17ffffff) + 0x2)
+
+function saving_pointer() => (dword_be(globalManager.GetInGameSaving()) & 0x17ffffff)
+function time_trial_character_1() => byte((saving_pointer()))
+function time_trial_character_2() => byte((saving_pointer()) + 0x1)
+function time_trial_kart() => byte((saving_pointer()) + 0x2)
 
 function current_driver() => byte(0x3CB750)
-
 
 function partner_order_pointer() => dword_be(0x003cb740)
 function partner_swap_time() => dword_be((partner_order_pointer() & 0x17ffffff) + 0x1dd0)
@@ -872,7 +916,7 @@ for unlock in save_file_unlocks {
         points=save_file_unlocks[unlock][5],
         type="progression",
         trigger=
-        grand_prix_completion() &&
+        grand_prix_save_file() &&
         cup() == cups[save_file_unlocks[unlock][2]] &&
         cc() == speed[save_file_unlocks[unlock][3]] &&
         prev(save_file_unlocks[unlock][1]) == 0 && save_file_unlocks[unlock][1] == 1
@@ -885,7 +929,7 @@ achievement (
     points=50,
     type="win_condition",
     trigger=
-    grand_prix_completion() &&
+    grand_prix_save_file() &&
     prev(bit6(save_file_unlockables_4())) == 0 && bit6(save_file_unlockables_4()) == 1
 )
 
@@ -922,7 +966,8 @@ achievement (
     title="The Winner is You!",
     description="Receive your prize code after completing a Time Trial",
     points=1,
-    trigger=prize_code_time_trial() && prize_code_check()
+    trigger=
+    prize_code_time_trial() && prize_code_check()
 )
 
 
@@ -1007,16 +1052,16 @@ for unlock in misc_specific {
     )
 }
 
-achievement (
-    title="Specialty in Racing",
-    description="In a Grand Prix race use Special Items at least 5 times and complete the race.",
-    points=5,
-    trigger=
-    once(race_start()) && 
-    trigger_when(prev(race_completed_flag()) == 0x00 && race_completed_flag() == 0x01) &&
-    measured(repeated(5, prev(item_pointer()) > 0 && special_check() && item_used())) && 
-    never(race_reset())
-)
+//achievement (
+//    title="Specialty in Racing",
+//    description="In a Grand Prix race use Special Items at least 5 times and complete the race.",
+//    points=5,
+//    trigger=
+//    once(race_start()) && 
+//    trigger_when(prev(race_completed_flag()) == 0x00 && race_completed_flag() == 0x01) &&
+//    measured(repeated(5, prev(item_pointer()) > 0 && special_check() && item_used())) && 
+//    never(race_reset())
+//)
 
 achievement (
     title="Superior Haunting Skills",
@@ -1082,6 +1127,7 @@ start_menu = {
     0x00: "Start Game",
     0x01: "Records",
     0x02: "Options",
+    0x03: "Lan Mode"
 }
 
 options_menu = {
@@ -1865,6 +1911,11 @@ rich_presence_conditional_display(
     rich_presence_value("Time Trial Race Time",current_race_time(), format="FRAMES")
 )
 
+
+rich_presence_conditional_display(
+    screen_id() == 0x08,
+    "In Lan Mode"
+)
 
 rich_presence_conditional_display(
     game_state() == 0x01 && screen_id() == 0x0b,

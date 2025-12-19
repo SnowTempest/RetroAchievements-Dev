@@ -1,0 +1,96 @@
+Progression:
+Bulbasaur's Prism Fragment
+Venusaur's Prism Fragment
+Pelipper's Prism Fragment
+Gyarados's Prism Fragment
+Empoleon's Prism Fragment
+Basiodon's Prism Fragment
+Rhyperior's Prism Fragment
+Blaziken's Prism Fragment
+Tangrowth's Prism Fragment
+Dusknoir's Prism Fragment
+Rotom's Prism Fragment
+Absol's Prism Fragment
+Salamence's Prism Fragment
+Rayquaza's Prism Fragment
+
+Win Condition:
+Friend Mew and save park
+
+Collection:
+
+All Meadown BFFS                
+All Beach BFFS              
+All Ice BFFS                
+All Cavern BFFS             
+All Lava BFFS               
+All Haunted BFFS                
+All Granite BFFS            
+All Flower BFFS             
+All BFFS?                            
+
+Bulbasaur All Bonuses
+Venusaur All Bonuses
+Pelipper All Bonuses
+Gyarados All Bonuses
+Empoleon All Bonuses
+Basiodon All Bonuses
+Rhyperior All Bonuses
+Blaziken All Bonuses
+Tangrowth All Bonuses
+Dusknoir All Bonuses
+Rotom All Bonuses
+Absol All Bonuses
+Salamence All Bonuses
+Rayquaza All Bonuses
+
+True Ending
+
+Challenges:
+Bulbasaur Weakest Link / Top Dog Times
+Venusaur Weakest Link / Top Dog Times
+Pelipper Pikachu (Decent Run) / Perfect Run (With or Without Latias?)
+Gyarados Aqua Dash Weakest Link / Decent Run
+Empoleon Weakest Link / Decent Run
+bastiodon weakest link / max score / max score with 1
+rhyperior weakest link / max score / baby character?
+blaziken weakest link / max score / max score baby characters?
+tangrowth weakest link / under 5 seconds
+dusknoir weakest link / ghost pokemon / darkrai
+rotom - weakest link / rotom self attacking / max score?
+absol weakest link / self clear / shaymin something
+salamence weakest link / perfect run latios / 
+rayquaza wekeast link / deoxys near perfect
+
+Misc:
+Bottles
+golden berry
+golden tops golem / hitmontop 
+
+
+GOALS
+
+Attractions
+
+Screens
+
+In-Game Checks
+-> loading check / event id check (since event id is 0 at main menu and is never 0 when in game except till mew cutscene is finished)
+Skill Games -> : C
+
+
+Gold Berries
+-> ONE SINGULAR GOLD BERRY
+-> HELL YEAH DUDE WE LOVE RNG
+
+
+Stat achievements: total berries, total wins, total skill game wins per game, 
+
+COMPLETE:
+Progression
+Win Condition
+BFFS
+Bonuses
+Attraction Challanges
+Upgrades
+Skill Game Wins
