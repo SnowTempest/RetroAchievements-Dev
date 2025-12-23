@@ -1641,10 +1641,10 @@ ProgressionDetails = {
     4: ["Frozen Monarch", "Empoleon's Snow Slide", "Empoleon's Area", 5, "Empoleon's"],
     5: ["Shock Charged", "Bastiodon's Block Barrage", "Cavern Zone", 5, "Bastiodon's"],
     6: ["Bumper to Bumper", "Rhyperior's Bumper Burn", "Lava Zone", 5, "Rhyperior's"],
-    7: ["1000 Degree Debris", "Blaziken's Boulder Bash", "Blaziken's Area", 5, "Blaziken's"],
+    7: ["1,000 Degree Debris", "Blaziken's Boulder Bash", "Blaziken's Area", 5, "Blaziken's"],
     8: ["Spirit Swings", "Tangrowth's Swing Along", "Haunted Zone", 10, "Tangrowth's"],
     9: ["Head Trauma Speedrun", "Dusknoir's Speed Slam", "Haunted Mansion", 10, "Dusknoir's"],
-    10: ["Pokebusters", "Rotom's Spooky Shoot-'em-up", "Rotom's Area", 10, "Rotom's"],
+    10: ["Pokébusters", "Rotom's Spooky Shoot-'em-up", "Rotom's Area", 10, "Rotom's"],
     11: ["How High Is Your Vertical", "Absol's Hurdle Bounce", "Granite Zone", 10, "Absol's"],
     12: ["Wings of Precision", "Salamence's Air Ace", "Granite Zone", 10, "Salamence's"],
     13: ["Blast Proof Balloons", "Rayquaza's Balloon Panic", "Flower Zone", 10, "Rayquaza's"]
@@ -1672,7 +1672,7 @@ BonusDetails = {
     5: ["Break the Defense", "Bastiodon's Block Barrage", "Cavern Zone", 5, 16],
     6: ["Raw Smackdown", "Rhyperior's Bumper Burn", "Lava Zone", 5, 16],
     7: ["Rhythmic Smashing", "Blaziken's Boulder Bash", "Blaziken's Area", 5, 16],
-    8: ["Swung From Down Under", "Tangrowth's Swing Along", "Haunted Zone", 5, 16],
+    8: ["Swung from Down Under", "Tangrowth's Swing Along", "Haunted Zone", 5, 16],
     9: ["Certified Kool-Aid Man", "Dusknoir's Speed Slam", "Haunted Mansion", 5, 16],
     10: ["100 Hours on Aimlabs", "Rotom's Spooky Shoot-'em-up", "Rotom's Area", 5, 16],
     11: ["Past All Hurdles", "Absol's Hurdle Bounce", "Granite Zone", 5, 16],
@@ -1695,8 +1695,8 @@ AttractionChallengeDetails = {
     11: ["Little League Soccer", "Bastiodon's Block Barrage", "MULTI", "score", "50,000 or more", 50000, 10],
     12: ["Iron Giant", "Bastiodon's Block Barrage", "Metagross", "perfect score", "99,999", 99999, 5],
     13: ["Volcanic Storm", "Rhyperior's Bumper Burn", "Heatran", "perfect score", "99,999", 99999, 5],
-    14: ["Blaze is Kicken", "Blaziken's Boulder Bash", "Blaziken", "perfect score", "40,800", 40800, 5],
-    15: ["Magma Flows With Ease", "Blaziken's Boulder Bash", "Groudon", "perfect score", "40,800", 40800, 3],
+    14: ["Blaze is Kick'n", "Blaziken's Boulder Bash", "Blaziken", "perfect score", "40,800", 40800, 5],
+    15: ["Magma Flows with Ease", "Blaziken's Boulder Bash", "Groudon", "perfect score", "40,800", 40800, 3],
     16: ["Just a Wee Lad", "Tangrowth's Swing Along", "Pichu", "time", "9.00 seconds or less", 540, 10],
     17: ["The Forest Calls Your Name", "Tangrowth's Swing Along", "Celebi", "time", "4.30 seconds or less", 258, 25],
     18: ["Nightmare on Void Street", "Dusknoir's Speed Slam", "Darkrai", "time", "6.66 seconds or less", 666, 5],
@@ -1708,17 +1708,17 @@ AttractionChallengeDetails = {
 }
 
 MiscDetails = {
-    0: ["Explosive Shock", "Fully upgrade Pikachu's thunderbolt", 3, saveData.THUNDERBOLT_UPGRADES],
-    1: ["Iron Tail With No Tail?", "Fully upgrade Pikachu's iron tail", 3, saveData.IRON_TAIL_UPGRADES],
-    2: ["Dashing Through the Zones", "Fully upgrade Pikachu's dash and learn double dash", 3, saveData.DASH_UPGRADES],
+    0: ["Explosive Shock", "Fully upgrade Pikachu's Thunderbolt", 3, saveData.THUNDERBOLT_UPGRADES],
+    1: ["Iron Tail with No Tail?", "Fully upgrade Pikachu's Iron Tail", 3, saveData.IRON_TAIL_UPGRADES],
+    2: ["Dashing Through the Zones", "Fully upgrade Pikachu's dash and learn Double Dash", 3, saveData.DASH_UPGRADES],
     3: ["Daily Dose of HP Up", "Fully upgrade Pikachu's health", 3, saveData.HP_UPGRADES],
-    4: ["Chase Mastery", "Win 100 chase skill games", 5, 100],
-    5: ["Battle Mastery", "Win 125 battle skill games", 10, 125],
-    6: ["Hide-and-Seek Mastery", "Win 15 hide-and-seek skill games", 5, 15],
-    7: ["Obstacle Hop Mastery", "Win 15 obstacle hop skill games", 5, 15],
-    8: ["Quiz Mastery", "Win 15 quiz skill games", 5, 15],
-    9: ["Berry Entrepreneur", "Accumalate 10,000+ total berries", 5, 10000],
-    10: ["Berry Monopoly", "Accumalate 50,000+ total berries", 10, 50000]
+    4: ["Chase Mastery", "Win 100 Chase skill games", 5, 100],
+    5: ["Battle Mastery", "Win 125 Battle skill games", 10, 125],
+    6: ["Hide-and-Seek Mastery", "Win 15 Hide-and-Seek skill games", 5, 15],
+    7: ["Obstacle Hop Mastery", "Win 15 Obstacle Hop skill games", 5, 15],
+    8: ["Quiz Mastery", "Win 15 Quiz skill games", 5, 15],
+    9: ["Berry Entrepreneur", "Accumulate a total of 10,000 berries or more", 5, 10000],
+    10: ["Berry Monopoly", "Accumulate a total of 50,000 berries or more", 10, 50000]
 }
 
 LeaderboardDetails = {
@@ -1775,7 +1775,7 @@ RPAttractionDetails = {
 for progression in ProgressionDetails {
     achievement (
         title=ProgressionDetails[progression][0],
-        description = "Complete the attraction goal for " + ProgressionDetails[progression][1] + " and retrieve " + ProgressionDetails[progression][4] + " Sky Prism Piece",
+        description = "Complete the attraction goal for " + ProgressionDetails[progression][1] + " and retrieve " + ProgressionDetails[progression][4] + " Sky Prism piece",
         points=ProgressionDetails[progression][3],
         type="progression",
         trigger=
@@ -1803,7 +1803,7 @@ achievement (
 
 achievement (
     title="All United Together Once More Forever",
-    description="View the true ending by talking to Mew after becoming friends with all Pokemon",
+    description="View the true ending by talking to Mew after becoming friends with all Pokémon",
     points=25,
     trigger=
     SAVE_FILE_LOADED &&
@@ -1816,7 +1816,7 @@ achievement (
 for detail in BestFriendDetails {
     achievement (
         title=BestFriendDetails[detail][0],
-        description="Become best friends with all Pokemon in the " + BestFriendDetails[detail][1],
+        description="Become best friends with all Pokémon in the " + BestFriendDetails[detail][1],
         points=BestFriendDetails[detail][2],
         trigger=
         SAVE_FILE_LOADED &&
