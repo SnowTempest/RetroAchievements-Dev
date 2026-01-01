@@ -86,39 +86,7 @@ function current_race() => dword_be(0x3B1480)
 function prize_code_pointer_time_trial_results() => dword_be(0x3A4B78)
 
 
-// $3BC1C4: [8-bit] Save File Unlockables 1
-//          Bit 0 = Turbo Birdo
-//          Bit 1 = Waluigi Racer
-//          Bit 2 = Piranha Pipes
-//          Bit 3 = Boo Pipes
-//          Bit 4 = Parade Kart
-function save_file_unlockables_1() => 0x3BC1C4
 
-// $3BC1C5: [8-bit] Save File Unlockables 2
-//          Bit 0 = Rattle Buggy
-//          Bit 1 = ParaWing
-//          Bit 2 = Barrel Train
-//          Bit 3 = Bullet Blaster
-//          Bit 4 = Toad Kart
-//          Bit 5 = Toadette Kart
-//          Bit 6 = Green Fire
-//          Bit 7 = Bloom Coach
-function save_file_unlockables_2() => 0x3BC1C5
-
-// $3BC1C6: [8-bit] Save File Unlockables 3
-//          Bit 0 = Tilt-A-Kart Battle Stage
-function save_file_unlockables_3() => 0x3BC1C6
-
-// $3BC1C7: [8-bit] Save File Unlockables 4
-//          Bit 0 = Toad / Toadette
-//          Bit 1 = Petey Piranha / Boo
-//          Bit 2 = Mirror Mode
-//          Bit 3 = Special Cup
-//          Bit 4 = All Cup Tour
-//          Bit 5 = Alternate Opening Screen
-//          Bit 6 = Alternate Credits Screen
-//          Bit 7 = Luigi's Mansion Battle Stage
-function save_file_unlockables_4() => 0x3BC1C7
 
 
 // $3B124C: [32-bit BE] Grand Prix First Character
@@ -799,6 +767,41 @@ characters = {
     "King Boo": 0x13,
     "Petey": 0x14
 }
+
+save_file = dword_be(0x3cbdf4) & 0x17ffffff
+
+// $3BC1C4: [8-bit] Save File Unlockables 1
+//          Bit 0 = Turbo Birdo
+//          Bit 1 = Waluigi Racer
+//          Bit 2 = Piranha Pipes
+//          Bit 3 = Boo Pipes
+//          Bit 4 = Parade Kart
+function save_file_unlockables_1() => save_file + 0x6044
+
+// $3BC1C5: [8-bit] Save File Unlockables 2
+//          Bit 0 = Rattle Buggy
+//          Bit 1 = ParaWing
+//          Bit 2 = Barrel Train
+//          Bit 3 = Bullet Blaster
+//          Bit 4 = Toad Kart
+//          Bit 5 = Toadette Kart
+//          Bit 6 = Green Fire
+//          Bit 7 = Bloom Coach
+function save_file_unlockables_2() => save_file + 0x6045
+
+// $3BC1C6: [8-bit] Save File Unlockables 3
+//          Bit 0 = Tilt-A-Kart Battle Stage
+function save_file_unlockables_3() => save_file + 0x6046
+// $3BC1C7: [8-bit] Save File Unlockables 4
+//          Bit 0 = Toad / Toadette
+//          Bit 1 = Petey Piranha / Boo
+//          Bit 2 = Mirror Mode
+//          Bit 3 = Special Cup
+//          Bit 4 = All Cup Tour
+//          Bit 5 = Alternate Opening Screen
+//          Bit 6 = Alternate Credits Screen
+//          Bit 7 = Luigi's Mansion Battle Stage
+function save_file_unlockables_4() => save_file + 0x6047
 
 // {0}: Item Unlocked, {1}: Value in Memory, {2}: Cup, {3}: Speed, {4}: Title, {5}: Points
 save_file_unlocks = {
