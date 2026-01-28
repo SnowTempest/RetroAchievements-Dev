@@ -803,6 +803,8 @@ function save_file_unlockables_3() => save_file + 0x6046
 //          Bit 7 = Luigi's Mansion Battle Stage
 function save_file_unlockables_4() => save_file + 0x6047
 
+function grand_prix_point_position() => dword_be(0x3b1260)
+
 // {0}: Item Unlocked, {1}: Value in Memory, {2}: Cup, {3}: Speed, {4}: Title, {5}: Points
 save_file_unlocks = {
     0: ["Green Fire", bit6(save_file_unlockables_2()), "Mushroom Cup", "50cc", "The Result of Copper Sulfate", 3],
@@ -919,10 +921,10 @@ for unlock in save_file_unlocks {
         points=save_file_unlocks[unlock][5],
         type="progression",
         trigger=
-        grand_prix_save_file() &&
+        grand_prix_completion() &&
         cup() == cups[save_file_unlocks[unlock][2]] &&
         cc() == speed[save_file_unlocks[unlock][3]] &&
-        prev(save_file_unlocks[unlock][1]) == 0 && save_file_unlocks[unlock][1] == 1
+        grand_prix_point_position() == 0
     )
 }
 
@@ -932,7 +934,7 @@ achievement (
     points=50,
     type="win_condition",
     trigger=
-    grand_prix_save_file() &&
+    grand_prix_completion() &&
     prev(bit6(save_file_unlockables_4())) == 0 && bit6(save_file_unlockables_4()) == 1
 )
 
