@@ -237,8 +237,10 @@ NULL = 0
 IN_GAME = dword_be(0x378ba0) != NULL
 SAVE_FILE_LOADED = dword_be(0x378a14) >= 0x00001400
 NOT_IN_WORLD = dword_be(0x378ba0) == NULL
-ENDING_FLAG = prev(bit1(0x378a3a)) == NULL && prev(bit2(0x378a3a)) == NULL && bit1(0x378a3a) == 0x01 && bit2(0x378a3a) == 1
-TRUE_ENDING_FLAG = prev(bit1(0x378a3a)) == 0x01 && prev(bit2(0x378a3a)) == 0x01 && prev(bit3(0x378a3a)) == NULL && bit1(0x378a3a) == NULL && bit2(0x378a3a) == NULL && bit3(0x378a3a) == 0x01
+
+ENDING_FLAG = prev(byte(0x379910)) == 0x00 && byte(0x379910) == 0x80
+//ENDING_FLAG = prev(bit1(0x378a3a)) == NULL && prev(bit2(0x378a3a)) == NULL && bit1(0x378a3a) == 0x01 && bit2(0x378a3a) == 1
+TRUE_ENDING_FLAG =  prev(bit3(0x378a3a)) == NULL && bit3(0x378a3a) == 0x01
 
 class AttractionManager
 {
@@ -784,7 +786,7 @@ class AttractionManager
         start = this.ATTRACTION_BONUS_START[attractionName]
         num_bonuses = this.ATTRACTION_NUM_BONUSES[attractionName]
         list = this.AttractionBonusList(start, num_bonuses)
-        return measured(sum_of(list, p => p) == length(list), when=this.ATTRACTION_ACTIVE) && prev(sum_of(list, p => p)) < length(list)
+        return sum_of(list, p => p) == length(list) && prev(sum_of(list, p => p)) < length(list)
     }
 
     function AttractionFinish() {
@@ -1608,7 +1610,7 @@ class SaveData
 
 
     function SumBestFriendsList(list) {
-        return measured(sum_of(this.BestFriendCountList(list), p => p) == length(list), when=IN_GAME) &&
+        return (sum_of(this.BestFriendCountList(list), p => p) == length(list)) &&
         prev(sum_of(this.BestFriendCountList(list), p => p)) < length(list)
     }
 
@@ -1819,6 +1821,7 @@ for detail in BestFriendDetails {
         description="Become best friends with all Pokémon in the " + BestFriendDetails[detail][1],
         points=BestFriendDetails[detail][2],
         trigger=
+        IN_GAME &&
         SAVE_FILE_LOADED &&
         saveData.CurrentLoadingStatus("ROAMING") &&
         saveData.SumBestFriendsList(BestFriendDetails[detail][3])
@@ -1833,6 +1836,7 @@ for bonus in BonusDetails {
         trigger=
         SAVE_FILE_LOADED &&
         saveData.GetZoneID(BonusDetails[bonus][2]) &&
+        currentAttraction.ATTRACTION_ACTIVE &&
         currentAttraction.ATTRACTION_TYPE["CLASSIC"] &&
         currentAttraction.ATTRACTION_ID == AttractionNameLookup[BonusDetails[bonus][1]] &&
         currentAttraction.GetAttractionBonuses(BonusDetails[bonus][1])
