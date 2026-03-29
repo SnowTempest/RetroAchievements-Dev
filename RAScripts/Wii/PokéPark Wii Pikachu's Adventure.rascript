@@ -1683,11 +1683,11 @@ BonusDetails = {
 }
 
 AttractionChallengeDetails = {
-    0: ["Yellow Flash", "Bulbasaur's Daring Dash", "Pikachu", "time", "6.60 seconds or less", 660, 5],
+    0: ["Yellow Flash", "Bulbasaur's Daring Dash", "Pikachu", "time", "6.80 seconds or less", 680, 5],
     1: ["Dream for Speed", "Bulbasaur's Daring Dash", "Mew", "time", "4.70 seconds or less", 470, 5],
     2: ["Null"],
     3: ["Null"],
-    4: ["Weights in Fish", "Venusaur's Vine Swing", "Magikarp", "distance", "40.00m or more", 400.00, 10],
+    4: ["Weights in Fish", "Venusaur's Vine Swing", "Magikarp", "distance", "40.00m or more", 400.00, 5],
     5: ["The Wish Maker's Prize", "Venusaur's Vine Swing", "Jirachi", "distance", "103.00m or more", 1030.00, 25],
     6: ["Little Wing Rings", "Pelipper's Circle Circuit", "MULTI", "score", "18,000 or more", 18000, 5],
     7: ["Eon Love", "Pelipper's Circle Circuit", "Latias", "perfect score", "31,000", 31000, 25],
@@ -1701,9 +1701,9 @@ AttractionChallengeDetails = {
     15: ["Magma Flows with Ease", "Blaziken's Boulder Bash", "Groudon", "perfect score", "40,800", 40800, 3],
     16: ["Just a Wee Lad", "Tangrowth's Swing Along", "Pichu", "time", "9.00 seconds or less", 540, 10],
     17: ["The Forest Calls Your Name", "Tangrowth's Swing Along", "Celebi", "time", "4.30 seconds or less", 258, 25],
-    18: ["Nightmare on Void Street", "Dusknoir's Speed Slam", "Darkrai", "time", "6.66 seconds or less", 666, 5],
+    18: ["Nightmare on Void Street", "Dusknoir's Speed Slam", "Darkrai", "time", "6.66 seconds or less", 666, 10],
     19: ["Ectoplasmic Electronic Possessor", "Rotom's Spooky Shoot-'em-up", "Rotom", "perfect score", "99,999", 99999, 25],
-    20: ["Gracidea in the Sky", "Absol's Hurdle Bounce", "Shaymin", "time", "9.65 seconds or less", 965, 5],
+    20: ["Gracidea in the Sky", "Absol's Hurdle Bounce", "Shaymin", "time", "9.85 seconds or less", 985, 5],
     21: ["Prehistoric Realms", "Salamence's Air Ace", "MULTI", "score", "22,000 or more", 22000, 5],
     22: ["Eon Soul", "Salamence's Air Ace", "Latios", "perfect score", "27,300", 27300, 25],
     23: ["Ride the Stars", "Rayquaza's Balloon Panic", "Deoxys", "score", "59,500 or more", 59500, 50]
