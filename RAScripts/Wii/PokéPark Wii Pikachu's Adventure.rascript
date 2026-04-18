@@ -2064,12 +2064,10 @@ for i in range (4, 8)
         description=MiscDetails[i][1],
         points=MiscDetails[i][2],
         trigger=
-        SAVE_FILE_LOADED &&
-        saveData.CurrentLoadingStatus("ROAMING") &&
         IN_GAME &&
         SAVE_FILE_LOADED &&
         prev(saveData.SKILL_GAME_WINS[i-4]) < MiscDetails[i][3] &&
-        saveData.SKILL_GAME_WINS[i-4] == MiscDetails[i][3]
+        saveData.SKILL_GAME_WINS[i-4] >= MiscDetails[i][3]
 
     )
 }
